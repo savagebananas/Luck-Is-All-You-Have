@@ -26,6 +26,7 @@ namespace Player_Scripts
                 if (_currentlySelectedInteractable != null && _currentlySelectedInteractable != interactable)
                 {
                     _currentlySelectedInteractable = interactable;
+                    _currentlySelectedInteractable.OnInteractSelected();
                 }
             }
         }

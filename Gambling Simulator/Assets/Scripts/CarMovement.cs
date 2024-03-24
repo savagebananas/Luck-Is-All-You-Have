@@ -20,7 +20,7 @@ public class CarMovement : MonoBehaviour
     void Update()
     {
         if (!isMoving) {
-            Invoke("MOveToRandomPoint", delay);
+            Invoke(nameof(MoveToRandomPoint), delay);
         }
         else {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
