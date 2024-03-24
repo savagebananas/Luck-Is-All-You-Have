@@ -8,10 +8,11 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private Vector2 inputMovement;
     private Rigidbody2D rb;
-
+    public bool canMove;
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        canMove = true;
     }
 
     void Update()
@@ -21,8 +22,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()
     {
-        inputMovement.x = Input.GetAxisRaw("Horizontal");
-        inputMovement.Normalize();
-        rb.velocity = inputMovement * speed * Time.deltaTime;
+        if (canMove)
+        {
+            inputMovement.x = Input.GetAxisRaw("Horizontal");
+            inputMovement.Normalize();
+            rb.velocity = inputMovement * speed * Time.deltaTime;
+        }
     }
 }
