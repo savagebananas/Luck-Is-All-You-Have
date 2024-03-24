@@ -7,7 +7,6 @@ namespace Player_Scripts
     public class PlayerInteractionScript : MonoBehaviour
     {
         private IInteractable _currentlySelectedInteractable;
-        public GameObject _currentGameObjectInteratcable;
 
         private void InteractWithCurrentInteractable()
         {
@@ -24,10 +23,8 @@ namespace Player_Scripts
             if (other.gameObject.TryGetComponent(out IInteractable interactable))
             {
                 Debug.Log($"Found current interactable: {interactable}");
-                if (_currentlySelectedInteractable == null || _currentlySelectedInteractable != interactable)
+                if (_currentlySelectedInteractable != null && _currentlySelectedInteractable != interactable)
                 {
-                    Debug.Log("Setting interactable!");
-                    _currentGameObjectInteratcable = other.gameObject;
                     _currentlySelectedInteractable = interactable;
                     _currentlySelectedInteractable.OnInteractSelected();
                 }
@@ -42,7 +39,6 @@ namespace Player_Scripts
                 {
                     _currentlySelectedInteractable.OnInteractionDeselected();
                     _currentlySelectedInteractable = null;
-                    _currentGameObjectInteratcable = null;
                 }
             }
         }
