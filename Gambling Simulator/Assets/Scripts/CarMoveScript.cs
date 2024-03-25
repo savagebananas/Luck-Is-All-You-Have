@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarMoveScript : MonoBehaviour
 {
     public float moveSpeed = 5;
-    public float end = 70;
+    public float end = 170;
 
     // Start is called before the first frame update
     void Start()
