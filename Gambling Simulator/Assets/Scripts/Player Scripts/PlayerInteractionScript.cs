@@ -8,9 +8,20 @@ namespace Player_Scripts
     {
         private IInteractable _currentlySelectedInteractable;
         public GameObject _currentGameObjectInteratcable;
+        public bool canInteract;
+
+        private void Start()
+        {
+            canInteract = true;
+        }
 
         private void InteractWithCurrentInteractable()
         {
+            if (!canInteract)
+            {
+                Debug.Log("Cant interact!");
+                return;
+            }
             if (_currentlySelectedInteractable == null)
             {
                 Debug.Log("Trying to interactable despite not being in range!");

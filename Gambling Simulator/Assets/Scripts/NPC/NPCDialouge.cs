@@ -1,23 +1,23 @@
 ﻿using System;
+using System.Collections;
+using Dialogue;
 using Interactables;
 using Player_Scripts;
+using TMPro;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace NPC
 {
     [RequireComponent(typeof(Collider2D))]
     public class NpcDialougeTrigger : MonoBehaviour, IInteractable
     {
-        public String Text;
-        public bool isInteracting;
+        public string[] sentences;
+        public Text textBox;
         public void OnInteract()
         {
-            if (isInteracting) return;
-            isInteracting = true;
-            Debug.Log(Text);
-            isInteracting = false;
-            //show display for dialogue
+            StartCoroutine(DialogueManager.Instance.AnimateText(sentences));
         }
         
 
@@ -33,7 +33,7 @@ namespace NPC
 
         public void OnInteractionDeselected()
         {
-            //hig ui display for dialogue
+            //hide ui display for dialogue
         }
     }
 }
