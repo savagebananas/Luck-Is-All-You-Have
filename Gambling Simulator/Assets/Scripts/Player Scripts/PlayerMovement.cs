@@ -34,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
             inputMovement.Normalize();
             rb.velocity = inputMovement * speed * Time.deltaTime;
         }
+        else
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 
     void Visuals()

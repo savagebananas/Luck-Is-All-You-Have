@@ -1585,7 +1585,7 @@ RectTransform:
   - {fileID: 1966240672}
   - {fileID: 973035501}
   - {fileID: 1164934397}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1115835140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2070,7 +2070,7 @@ GameObject:
   - component: {fileID: 735549344}
   - component: {fileID: 735549342}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Global Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2093,7 +2093,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
-  m_Intensity: 1.2
+  m_Intensity: 0.9
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 0000000089611fc5bb06ee5365a3ffe5030ea82b
@@ -2134,12 +2134,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735549341}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.7098255, y: 2.489792, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.564161, y: -1.5064967, z: -0.1700626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 999414163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &735549344
 MonoBehaviour:
@@ -2153,23 +2153,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0d06d4c93e5624a9ecc0b698310a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 120
+  secondsPerGameDay: 360
+  timePercentage: 0
   gradient:
     serializedVersion: 2
-    key0: {r: 0.0529103, g: 0.08826255, b: 0.38679248, a: 1}
-    key1: {r: 1, g: 0.751696, b: 0.2783019, a: 1}
+    key0: {r: 0.17254902, g: 0.18431373, b: 0.40784314, a: 1}
+    key1: {r: 0.9811321, g: 0.8694961, b: 0.66180134, a: 1}
     key2: {r: 1, g: 0.98040944, b: 0.8443396, a: 1}
     key3: {r: 0.9811321, g: 0.9579922, b: 0.91171235, a: 1}
-    key4: {r: 1, g: 0.405772, b: 0.25, a: 1}
-    key5: {r: 0.05490196, g: 0.09019608, b: 0.3882353, a: 0}
+    key4: {r: 1, g: 0.53137064, b: 0.25098038, a: 1}
+    key5: {r: 0.17030083, g: 0.18254739, b: 0.4056604, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 6746
-    ctime1: 16962
-    ctime2: 26985
-    ctime3: 32960
-    ctime4: 51079
-    ctime5: 59945
+    ctime0: 8867
+    ctime1: 17926
+    ctime2: 28334
+    ctime3: 37779
+    ctime4: 48573
+    ctime5: 54548
     ctime6: 0
     ctime7: 0
     atime0: 0
@@ -2583,6 +2584,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973035500}
   m_CullTransparentMesh: 1
+--- !u!1 &999414162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999414163}
+  m_Layer: 0
+  m_Name: Time Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &999414163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999414162}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1456645, y: 3.9962888, z: 0.1700626}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 735549343}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1027929235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2915,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 934847712}
   - {fileID: 1044097353}
+  - {fileID: 504101529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1164934396
@@ -3713,7 +3747,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ed07a4e11ef9abc489d0714465281057, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4069,10 +4103,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1115835140}
+  - {fileID: 999414163}
   - {fileID: 411550248}
   - {fileID: 247440772}
   - {fileID: 1753574777}
-  - {fileID: 504101529}
   - {fileID: 1494550070}
-  - {fileID: 735549343}
   - {fileID: 2064056451}

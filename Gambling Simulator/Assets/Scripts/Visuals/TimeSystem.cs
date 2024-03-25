@@ -6,7 +6,9 @@ using UnityEngine.Rendering.Universal;
 [RequireComponent(typeof(Light2D))]
 public class TimeSystem : MonoBehaviour
 {
-    public float duration = 5f;
+    public float secondsPerGameDay;
+    private float timeElapsed;
+    public float timePercentage;
 
     [SerializeField] private Gradient gradient;
     private Light2D light;
@@ -20,10 +22,18 @@ public class TimeSystem : MonoBehaviour
 
     void Update()
     {
-        var timeElapsed = Time.time - startTime;
-        float percentage = (float) (Mathf.Sin(timeElapsed / duration * Mathf.PI * 2) * 0.5 + 0.5f);
 
-        percentage = Mathf.Clamp(percentage, 0, 1);
-        light.color = gradient.Evaluate(percentage);
+        timeElapsed = Time.time - startTime;
+        
+        // reset time at the end of day
+        if (timeElapsed >= secondsPerGameDay)
+        {
+            startTime = Time.time;
+        }
+        
+        // convert time of day to percentage gradient
+        timePercentage = timeElapsed / secondsPerGameDay;
+        timePercentage = Mathf.Clamp(timePercentage, 0, 1);
+        light.color = gradient.Evaluate(timePercentage);
     }
 }
