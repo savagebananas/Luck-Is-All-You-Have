@@ -33,7 +33,6 @@ public class NPCVisuals : MonoBehaviour
     void Visuals()
     {
         float diffX = transform.position.x - lastX;
-        Debug.Log(diffX);
         // Player is moving
         if (diffX != 0)
         {
