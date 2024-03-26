@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         {
             inputMovement.x = Input.GetAxisRaw("Horizontal");
             inputMovement.Normalize();
-            rb.velocity = inputMovement * speed * Time.deltaTime;
+            rb.velocity = inputMovement * speed;
         }
         else
         {

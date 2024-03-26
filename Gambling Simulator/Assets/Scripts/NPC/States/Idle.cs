@@ -14,7 +14,7 @@ public class Idle : State
     public override void OnStart()
     {
         Debug.Log("Idle State");
-        timeOfNextState = TimeSystem.timePercentage + Random.RandomRange(0.01f, 0.02f);
+        timeOfNextState = TimeSystem.timePercentage + Random.Range(0.01f, 0.02f);
     }
 
     public override void OnUpdate()
