@@ -7,22 +7,21 @@ public class NPCVisuals : MonoBehaviour
     private Animator animator;
 
     private float lastX;
-    private float timer = 0.1f;
+    private float timer = 0.01f;
 
     void Start()
     {
         animator = this.GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         timer -= Time.time;
         if (timer <= 0)
         {
             lastX = transform.position.x;
-            timer = 0.1f;
+            timer = 0.01f;
         }
-
     }
 
     private void LateUpdate()
@@ -34,7 +33,7 @@ public class NPCVisuals : MonoBehaviour
     void Visuals()
     {
         float diffX = transform.position.x - lastX;
-
+        Debug.Log(diffX);
         // Player is moving
         if (diffX != 0)
         {

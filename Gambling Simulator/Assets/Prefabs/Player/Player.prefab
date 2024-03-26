@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ed07a4e11ef9abc489d0714465281057, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 732433923
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1172316876, guid: 4d0cb474149f5b542bc1ec47f82bc68b, type: 3}
+  m_Sprite: {fileID: -1462910199, guid: 4d0cb474149f5b542bc1ec47f82bc68b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd006427ac863c41b91ae4120163406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 800
+  speed: 3
   canMove: 0
 --- !u!114 &195436581597752690
 MonoBehaviour:
@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentGameObjectInteratcable: {fileID: 0}
+  canInteract: 0
 --- !u!95 &5180025016425418701
 Animator:
   serializedVersion: 5

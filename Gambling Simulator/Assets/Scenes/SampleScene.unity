@@ -553,22 +553,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5126511991220609749, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5769086666918438428, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1462910199, guid: 4d0cb474149f5b542bc1ec47f82bc68b, type: 3}
-    - target: {fileID: 5769086666918438428, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5769086666918438428, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ed07a4e11ef9abc489d0714465281057, type: 2}
     - target: {fileID: 6876324646849128161, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
