@@ -12,42 +12,12 @@ using UnityEngine.UI;
 namespace NPC
 {
     [RequireComponent(typeof(Collider2D))]
-    public class NpcDialougeTrigger : MonoBehaviour, IInteractable
+    public class NPCDialouge : NPCDialougeBase
     {
-        public string[] sentences;
-        public Text textBox;
-        public Talking TalkingState;
-        public void OnInteract()
+        public override void OnFinishNPCInteraction()
         {
-            StartCoroutine(_runInteraction());
-        }
-
-        private IEnumerator _runInteraction()
-        {
-            PlayerMain.Instance.playerMovement.canMove = false;
-            PlayerMain.Instance.playerInteractionScript.canInteract = false;
-            StateMachine stateMachine = transform.parent.GetComponentInChildren<StateMachine>();
-            State oldState = stateMachine.CurrentState;
-            stateMachine.SetNewState(TalkingState);
-            yield return StartCoroutine(DialogueManager.Instance.AnimateText(sentences));
-            PlayerMain.Instance.playerMovement.canMove = true;
-            PlayerMain.Instance.playerInteractionScript.canInteract = true;
-            stateMachine.SetNewState(oldState);
-        }
-
-        public void OnInteractSelected()
-        {
-            //highlight?
-        }
-
-        public void InteractSelectedLoop()
-        {
-            //unhighlight?
-        }
-
-        public void OnInteractionDeselected()
-        {
-            //hide ui display for dialogue
+            base.OnFinishNPCInteraction();
+            Debug.Log("Finished NPC interaction");
         }
     }
 }
