@@ -8,7 +8,7 @@ public class TimeSystem : MonoBehaviour
 {
     public float secondsPerGameDay;
     private float timeElapsed;
-    public float timePercentage;
+    public static float timePercentage;
 
     [SerializeField] private Gradient gradient;
     private Light2D light;
