@@ -35,8 +35,6 @@ namespace Dialogue
 
         public IEnumerator AnimateText(string[] sentences)
         {
-            PlayerMain.Instance.playerMovement.canMove = false;
-            PlayerMain.Instance.playerInteractionScript.canInteract = false;
             textBox.text = "";
             dialogueGameObject.gameObject.SetActive(true);
             foreach (var sentence in sentences)
@@ -53,9 +51,6 @@ namespace Dialogue
 
                 yield return new WaitUntil(() => progressToNextSentence);
             }
-            
-            PlayerMain.Instance.playerMovement.canMove = true;
-            PlayerMain.Instance.playerInteractionScript.canInteract = true;
             dialogueGameObject.gameObject.SetActive(false);
             textBox.text = "";
         }

@@ -2,6 +2,7 @@
 using System.Collections;
 using Dialogue;
 using Interactables;
+using NPC.States;
 using Player_Scripts;
 using TMPro;
 using Unity.Collections;
@@ -15,11 +16,24 @@ namespace NPC
     {
         public string[] sentences;
         public Text textBox;
+        public Talking TalkingState;
         public void OnInteract()
         {
-            StartCoroutine(DialogueManager.Instance.AnimateText(sentences));
+            StartCoroutine(_runInteraction());
         }
-        
+
+        private IEnumerator _runInteraction()
+        {
+            PlayerMain.Instance.playerMovement.canMove = false;
+            PlayerMain.Instance.playerInteractionScript.canInteract = false;
+            StateMachine stateMachine = transform.parent.GetComponentInChildren<StateMachine>();
+            State oldState = stateMachine.CurrentState;
+            stateMachine.SetNewState(TalkingState);
+            yield return StartCoroutine(DialogueManager.Instance.AnimateText(sentences));
+            PlayerMain.Instance.playerMovement.canMove = true;
+            PlayerMain.Instance.playerInteractionScript.canInteract = true;
+            stateMachine.SetNewState(oldState);
+        }
 
         public void OnInteractSelected()
         {
