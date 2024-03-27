@@ -47,7 +47,7 @@ public class WalkToPoint : State
     /// </summary>
     void SetNextPosition()
     {
-        float time = TimeSystem.timePercentage;
+        float time = TimeSystem.time;
         for (int i = 0; i < times.Count; i++)
         {
             if (time >= times[i] && time < times[i + 1] || i == times.Count - 1 && time >= times[i])

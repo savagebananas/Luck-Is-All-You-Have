@@ -14,14 +14,14 @@ public class Idle : State
     public override void OnStart()
     {
         Debug.Log("Idle State");
-        timeOfNextState = TimeSystem.timePercentage + Random.Range(0.01f, 0.02f);
+        timeOfNextState = TimeSystem.time + Random.Range(0.08f, 0.2f); // 1f = 1 hour in-game time
     }
 
     public override void OnUpdate()
     {
-        if (TimeSystem.timePercentage >= timeOfNextState)
+        if (TimeSystem.time >= timeOfNextState)
         {
-            if (TimeSystem.timePercentage >= nextWalkToPointTime)
+            if (TimeSystem.time >= nextWalkToPointTime)
             {
                 
                 stateMachine.SetNewState(walkToPointState);
