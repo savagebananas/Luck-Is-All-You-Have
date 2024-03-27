@@ -33,7 +33,9 @@ public class TimeSystem : MonoBehaviour
         
         // convert time of day to percentage gradient
         timePercentage = timeElapsed / secondsPerGameDay;
-        timePercentage = Mathf.Clamp(timePercentage, 0, 1);
-        light.color = gradient.Evaluate(timePercentage);
+        timePercentage = Mathf.Clamp(timePercentage, 0, 24);
+        light.color = gradient.Evaluate(Mathf.Clamp(timePercentage, 0, 1));
+
+
     }
 }
