@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ManualMoveScript : MonoBehaviour
 {
-    public float accelerationStrength = 100;
+    public float accelerationStrength = 3;
+    public float decelerationStrength = 2;
     public Rigidbody2D rb;
+    public GameObject gameOverScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +21,25 @@ public class ManualMoveScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)==true)
         {
             if (rb.velocity.magnitude<50) {
-                rb.AddForce(Vector2.right * accelerationStrength);
+                accelerate();
+            }
+        }
+        else
+        {
+            if (rb.velocity.magnitude > 0)
+            {
+                decelerate();
             }
         }
          
     }
-     
+    void accelerate()
+    {
+        rb.velocity += accelerationStrength*Time.deltaTime*Vector2.right;
+    }
+    void decelerate()
+    {
+        rb.velocity -= decelerationStrength*Time.deltaTime*Vector2.right;
+        
+    }
 }
