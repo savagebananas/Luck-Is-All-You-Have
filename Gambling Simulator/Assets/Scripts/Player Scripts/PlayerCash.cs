@@ -7,26 +7,37 @@ using UnityEngine.UI;
 
 public class PlayerCash : MonoBehaviour
 {
-    public int startingCash = 100;
-    private int cash;
+    private static int cash = 100;
     // Start is called before the first frame update
     public GameObject cashDisplay;
-    public TextMeshProUGUI cashText;
+    public static TextMeshProUGUI cashText;
     void Start()
     {
         if (cashDisplay == null) {
             cashDisplay = GameObject.Find("CashValueText");
         }
         cashText = cashDisplay.GetComponent<TextMeshProUGUI>();
-        setCash(startingCash);
+        updateCashUI();
+    }
+
+    void Awake() {
+        updateCashUI();
+    }
+    public static void updateCashUI() {
+        if (cashText != null)
+            cashText.text = cash.ToString();
     }
 
     public int getCash() {
         return cash;
     }
-    public void setCash(int newCash) {
+    public static void setCash(int newCash) {
         cash = newCash;
-        cashText.text = cash.ToString();
+        updateCashUI();
+    }
+
+    public static void addCash(int addCash) {
+        setCash(cash+addCash);
     }
 
     // Update is called once per frame
