@@ -11,6 +11,8 @@ public class Pot : MonoBehaviour
     public int potNum;
     public int attempts = 10;
     public bool end = false;
+    private bool canPress = true;
+    public Animator ani;
   
     // Start is called before the first frame update
     void Start()
@@ -18,19 +20,25 @@ public class Pot : MonoBehaviour
         //Generate user number
         userNum = Random.Range(1, 21);
         ticket.text = "Your number is " + userNum.ToString();
+        ani = this.GetComponent<Animator>();
+  
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && !end && attempts>0)
+        if(Input.GetKeyDown(KeyCode.Space) && !end && attempts>0 && canPress)
         {
             potNum = Random.Range(1, 21);
-            pot.text = "Pot number is " + potNum.ToString();
+            pot.text = potNum.ToString();
+            ani.SetBool("isOpen", true);
+            canPress = false;
+
+            StartCoroutine(resetTimer());
 
             if (potNum == userNum) {
                 Debug.Log("You win!");
-                pot.text += " - You win!";
+                ticket.text += " - You win!";
                 end = true;
             }
             attempts--;
@@ -38,14 +46,17 @@ public class Pot : MonoBehaviour
             if(attempts==0 && !end)
             {
                 Debug.Log("Game over you bozo");
-                pot.text += "Game over you bozo";
+                ticket.text += "Game over you bozo";
                 end = true;
             }
-
-
-
-
         }
-
     }
+
+    IEnumerator resetTimer()
+    {
+        yield return new WaitForSeconds(3);
+        ani.SetBool("isOpen", false);
+        canPress = true;
+    }
+
 }
