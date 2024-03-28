@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2919437599253263135}
   - component: {fileID: 6421364292211738124}
-  - component: {fileID: 9040045564436432177}
+  - component: {fileID: -2723526005500533556}
   m_Layer: 0
-  m_Name: car2
+  m_Name: Blue Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ed07a4e11ef9abc489d0714465281057, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 732433923
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e29b07519239ba43a1a535fe0230c9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9040045564436432177
+--- !u!114 &-2723526005500533556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,8 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5370699207652808477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a31eb36034ce4147a467acaef4e675d, type: 3}
+  m_Script: {fileID: 11500000, guid: 81bdcfc9d42304a5887204049eeea6a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed2: 5
-  end2: 170
+  moveSpeed: 5
+  leftBound: -170
+  rightBound: 170
+  goingLeft: 0

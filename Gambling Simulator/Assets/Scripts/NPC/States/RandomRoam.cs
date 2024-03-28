@@ -20,7 +20,7 @@ public class RandomRoam : State
         npc = transform.parent.parent.gameObject;
         speed = npc.GetComponent<NPCMain>().walkSpeed;
 
-        nextPos = new Vector2(transform.position.x + Random.Range(-15, 15), transform.position.y);
+        nextPos = new Vector2(transform.position.x + Random.RandomRange(-15, 15), transform.position.y);
     }
 
     public override void OnUpdate()

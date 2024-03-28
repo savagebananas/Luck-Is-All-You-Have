@@ -1,19 +1,22 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CarSpawnerScript : MonoBehaviour
 {
-    public GameObject car;
-    public float spawnRate=3;
+    public List<GameObject> carPrefabs;
+    public float spawnRate;
+    public int sortingLayerOrder;
     private float timer = 0;
-    // Start is called before the first frame update
-    void Start()
+
+    public bool leftMovingCars;
+
+    private void Start()
     {
-        
+        timer = spawnRate;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timer < spawnRate) {
@@ -21,7 +24,17 @@ public class CarSpawnerScript : MonoBehaviour
         }
 
         else {
-            Instantiate(car, transform.position, transform.rotation);
+            // Instantiate car
+            var car = Instantiate(carPrefabs[(int) Random.RandomRange(0, carPrefabs.Count)], transform.position, transform.rotation);
+            
+            // Set car move script to move left or right
+            car.GetComponent<CarMoveScript>().goingLeft = leftMovingCars;
+            
+            // Setting sorting layer of sprites depending on moving left or right
+            if (leftMovingCars) car.GetComponent<SpriteRenderer>().sortingOrder = 1;
+            else car.GetComponent<SpriteRenderer>().sortingOrder = 0;
+
+            // reset timer
             timer = 0;
         }
 

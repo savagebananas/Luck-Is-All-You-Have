@@ -9,8 +9,8 @@ namespace Player_Scripts
     {
         public static PlayerMain Instance;
 
-        public PlayerMovement playerMovement;
-        public PlayerInteractionScript playerInteractionScript;
+        [HideInInspector] public PlayerMovement playerMovement;
+        [HideInInspector] public PlayerInteractionScript playerInteractionScript;
         
         private void Awake() 
         { 
