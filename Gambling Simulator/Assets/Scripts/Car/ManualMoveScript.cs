@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class ManualMoveScript : MonoBehaviour
 {
-    public float accelerationStrength = 3;
-    public float decelerationStrength = 2;
+    public float accelerationStrength ;
+    public float decelerationStrength;
+    public GameObject go;
     public Rigidbody2D rb;
-    public GameObject gameOverScreen;
+    public int frames = 20;
     // Start is called before the first frame update
     void Start()
     {
- 
+     
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Space)==true)
+
+        if (frames == 0)
+        {
+            accelerationStrength *= 2;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) == true && go.activeSelf)
         {
             if (rb.velocity.magnitude<50) {
                 accelerate();
+                frames--;
             }
         }
         else
@@ -29,6 +35,7 @@ public class ManualMoveScript : MonoBehaviour
             if (rb.velocity.magnitude > 0)
             {
                 decelerate();
+                frames--;
             }
         }
          
