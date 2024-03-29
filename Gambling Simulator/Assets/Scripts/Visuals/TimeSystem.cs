@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-[RequireComponent(typeof(Light2D))]
 public class TimeSystem : MonoBehaviour
 {
     [Header("Game Over")]
