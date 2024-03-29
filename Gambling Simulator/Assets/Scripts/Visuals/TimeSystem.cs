@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-[RequireComponent(typeof(Light2D))]
 public class TimeSystem : MonoBehaviour
 {
     [Header("Game Over")]
@@ -27,6 +26,7 @@ public class TimeSystem : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(this);
         light = GetComponent<Light2D>();
         startTime = Time.time;
 

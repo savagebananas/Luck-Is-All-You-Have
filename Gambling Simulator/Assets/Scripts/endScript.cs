@@ -16,9 +16,9 @@ public class endScript : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.gameObject.layer == 3) {
+        if (col.gameObject.layer == 3) {
             over.SetActive(true);
         }
 

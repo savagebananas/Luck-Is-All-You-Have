@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Minigames;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pot : MonoBehaviour
+public class Pot : MinigameBase
 {
     public Text ticket;
     public Text pot;
@@ -40,6 +41,7 @@ public class Pot : MonoBehaviour
                 Debug.Log("You win!");
                 ticket.text += " - You win!";
                 end = true;
+                OnStopMinigame();
             }
             attempts--;
 
@@ -48,6 +50,7 @@ public class Pot : MonoBehaviour
                 Debug.Log("Game over you bozo");
                 ticket.text += "Game over you bozo";
                 end = true;
+                OnStopMinigame();
             }
         }
     }
@@ -59,4 +62,9 @@ public class Pot : MonoBehaviour
         canPress = true;
     }
 
+    public override void OnStopMinigame()
+    {
+        base.OnStopMinigame();
+        //TODO: add logic for if we won or lost
+    }
 }
