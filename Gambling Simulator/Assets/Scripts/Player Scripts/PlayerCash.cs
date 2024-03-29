@@ -28,7 +28,7 @@ public class PlayerCash : MonoBehaviour
             cashText.text = cash.ToString();
     }
 
-    public int getCash() {
+    public static int getCash() {
         return cash;
     }
     public static void setCash(int newCash) {

@@ -15,7 +15,7 @@ namespace Player_Scripts
         private void Awake() 
         { 
             // If there is an instance, and it's not me, delete myself.
-    
+            
             if (Instance != null && Instance != this) 
             { 
                 Destroy(this); 
@@ -24,6 +24,7 @@ namespace Player_Scripts
             { 
                 Instance = this; 
             } 
+            DontDestroyOnLoad(this.gameObject);
         }
 
         private void Start()

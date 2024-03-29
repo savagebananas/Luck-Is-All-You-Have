@@ -27,6 +27,7 @@ public class TimeSystem : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(this);
         light = GetComponent<Light2D>();
         startTime = Time.time;
 
