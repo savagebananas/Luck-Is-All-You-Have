@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5937792145779987615}
   - component: {fileID: 5126511991220609749}
   - component: {fileID: 195436581597752690}
+  - component: {fileID: 7241788980546527296}
   - component: {fileID: 5180025016425418701}
   m_Layer: 0
   m_Name: Player
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 732433923
   m_SortingLayer: 4
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1462910199, guid: 4d0cb474149f5b542bc1ec47f82bc68b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -204,6 +205,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentGameObjectInteratcable: {fileID: 0}
   canInteract: 0
+--- !u!114 &7241788980546527296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256177857754012607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f047e67aca914487495f87dde8db52fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cashDisplay: {fileID: 0}
 --- !u!95 &5180025016425418701
 Animator:
   serializedVersion: 5
