@@ -22,7 +22,7 @@ public class PlinkoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && tries!=0)
+        if (Input.GetKeyDown(KeyCode.Space) && tries != 0)
         {
             if (specialnum == 0 && !ballReleased)
             {
@@ -57,6 +57,14 @@ public class PlinkoScript : MonoBehaviour
             }
             tries--;
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            changeGravity(r1, 1);
+            changeGravity(r3, 1);
+            changeGravity(r2, 1);
+            changeGravity(r5, 1);
+        }
+
 
     }
     void changeGravity(Rigidbody2D r,float newVal) {

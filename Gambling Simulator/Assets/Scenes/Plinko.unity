@@ -3593,8 +3593,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -281, y: 235}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchoredPosition: {x: -276, y: 198}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784473187
 MonoBehaviour:
@@ -3629,9 +3629,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Welcome to plinko!
-
-    Press space to release the ball! '
+  m_Text: "Welcome to plinko!\nPress space to release the ball! \nPress A to release
+    all balls!"
 --- !u!222 &1784473188
 CanvasRenderer:
   m_ObjectHideFlags: 0
