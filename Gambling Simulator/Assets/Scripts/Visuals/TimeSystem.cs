@@ -1,6 +1,8 @@
+using Player_Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -18,17 +20,32 @@ public class TimeSystem : MonoBehaviour
 
     // Color and Light
     [SerializeField] private Gradient gradient;
-    private Light2D light;
+    public Light2D globalLight;
     
     // UI
-    private TextMeshProUGUI daysLeftText;
-    private TextMeshProUGUI timeText;
+    public TextMeshProUGUI daysLeftText;
+    public TextMeshProUGUI timeText;
+
+    public static TimeSystem instance;
+
+    private void Start()
+    {
+        startTime = Time.time;
+    }
 
     void Awake()
     {
-        DontDestroyOnLoad(this);
-        light = GetComponent<Light2D>();
-        startTime = Time.time;
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        
+
 
         daysLeftText = GameObject.Find("DaysLeftText").GetComponent<TextMeshProUGUI>();
         timeText = GameObject.Find("TimeText").GetComponent<TextMeshProUGUI>();
@@ -37,7 +54,6 @@ public class TimeSystem : MonoBehaviour
 
     void Update()
     {
-
         timeElapsed = Time.time - startTime;
         
         // End of day
@@ -56,13 +72,17 @@ public class TimeSystem : MonoBehaviour
         
         timePercentage = timeElapsed / secondsPerGameDay;
 
+
         // convert time of day to color gradient
-        light.color = gradient.Evaluate(Mathf.Clamp(timePercentage, 0, 1));
+        if (globalLight != null) globalLight.color = gradient.Evaluate(Mathf.Clamp(timePercentage, 0, 1));
 
         // display time to text UI
         time = Mathf.Lerp(0, 24, Mathf.Clamp(timePercentage, 0, 1));
         int minutes = (int) Mathf.Lerp(0, 60, time % 1);
+
         timeToText((int) time, minutes);
+
+        
 
     }
 

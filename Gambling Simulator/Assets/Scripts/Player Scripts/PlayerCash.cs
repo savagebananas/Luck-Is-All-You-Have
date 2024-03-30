@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class PlayerCash : MonoBehaviour
 {
     private static int cash = 100;
-    // Start is called before the first frame update
     public GameObject cashDisplay;
     public static TextMeshProUGUI cashText;
     void Start()

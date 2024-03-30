@@ -12,6 +12,7 @@ namespace Player_Scripts
         [HideInInspector] public PlayerMovement playerMovement;
         [HideInInspector] public PlayerInteractionScript playerInteractionScript;
         
+        /*
         private void Awake() 
         { 
             // If there is an instance, and it's not me, delete myself.
@@ -26,6 +27,7 @@ namespace Player_Scripts
             } 
             DontDestroyOnLoad(this.gameObject);
         }
+        */
 
         private void Start()
         {
