@@ -36,7 +36,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public void OnInteractionDeselected()
     {
-        interactionLight.SetActive(false);
+        if (interactionLight != null) interactionLight.SetActive(false);
     }
 
 
