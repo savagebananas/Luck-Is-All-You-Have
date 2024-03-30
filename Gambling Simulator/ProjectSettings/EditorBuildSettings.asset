@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Casino Interior.unity
     guid: 3cdb314d349e4d64d9f21878fe7f9797
+  - enabled: 1
+    path: Assets/Scenes/Alleyway.unity
+    guid: 25a5c653ea7595b4b8ef6652919515b8
   m_configObjects: {}
