@@ -71,7 +71,7 @@ public class PlinkoScript : MonoBehaviour
         {
             changeGravity(r1, 1);
             changeGravity(r3, 1);
-            changeGravity(r2, 1);
+           // changeGravity(r2, 1);
             changeGravity(r4, 1);
             changeGravity(r5, 1);
             changeGravity(r6, 1);
