@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DragRace .unity
     guid: efe40a17cd5d045268dff2ba18f5064a
   - enabled: 1
-    path: Assets/Scenes/Keno .unity
+    path: Assets/Scenes/Keno.unity
     guid: ff603076acb244f34ba75437767dbc0c
   - enabled: 1
     path: Assets/Scenes/Casino Interior.unity

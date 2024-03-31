@@ -1,4 +1,5 @@
 using Interactables;
+using Player_Scripts;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,7 +26,12 @@ public class Door : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        if (buttonPressRequired) StartCoroutine(SwitchScene(sceneName));
+        if (buttonPressRequired)
+        {
+                StartCoroutine(SwitchScene(sceneName));
+                SetPlayerPosition.lastPos = transform.position.x;
+        }
+
     }
 
     public void OnInteractSelected()
@@ -44,6 +50,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         blackUIScreen.SetActive(true);
         blackUIScreen.GetComponent<Animator>().SetTrigger("FadeOut");
+
         yield return new WaitForSeconds(fadeToBlackClip.length);
         SceneManager.LoadScene(name);
     }

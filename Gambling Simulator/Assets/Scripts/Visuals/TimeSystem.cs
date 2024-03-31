@@ -111,4 +111,9 @@ public class TimeSystem : MonoBehaviour
             }
         }
     }
+
+    public static void AddTime(float seconds)
+    {
+        startTime -= seconds;
+    }
 }
