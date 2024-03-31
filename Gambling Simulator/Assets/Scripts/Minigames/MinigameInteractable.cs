@@ -9,6 +9,7 @@ namespace Minigames
     {
         public string SceneToLoad;
         public bool running;
+        public GameObject interactLight;
         public void OnInteract()
         {
             if (running) return;
@@ -25,7 +26,7 @@ namespace Minigames
         
         public void OnInteractSelected()
         {
-            
+            interactLight.SetActive(true);
         }
 
         public void InteractSelectedLoop()
@@ -35,7 +36,7 @@ namespace Minigames
 
         public void OnInteractionDeselected()
         {
-            
+            interactLight.SetActive(false);
         }
     }
 }
