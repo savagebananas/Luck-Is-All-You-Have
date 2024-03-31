@@ -10,7 +10,7 @@ public class SlotMachine : MonoBehaviour
     private bool isSpinning = false;
     private float spinDuration = 2.0f; // Duration of each reel spin
 
-    public const int spinCost = 10;
+    public const int spinCost = 100;
 
 
     void Start()
@@ -64,12 +64,12 @@ public class SlotMachine : MonoBehaviour
             Sprite s1 = slotReels[0].sprite;
             //Give Payouts based on symbol
             if (s1 == seven) {
-                PlayerCash.addCash(700);
+                PlayerCash.addCash(7000);
             }
             if (s1 == horseShoe) {
-                PlayerCash.addCash(500);
+                PlayerCash.addCash(5000);
             } else {
-                PlayerCash.addCash(300);
+                PlayerCash.addCash(3000);
             }
             
         }
