@@ -14,7 +14,8 @@ public class Pot : MinigameBase
     public bool end = false;
     private bool canPress = true;
     public Animator ani;
-  
+    public GameObject over;
+    public GameObject start;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,16 +42,17 @@ public class Pot : MinigameBase
                 Debug.Log("You win!");
                 ticket.text += " - You win!";
                 end = true;
-                OnStopMinigame();
+                start.SetActive(false);
+               
             }
             attempts--;
 
             if(attempts==0 && !end)
             {
+                start.SetActive(false);
+                over.SetActive(true);
                 Debug.Log("Game over you bozo");
-                ticket.text += "Game over you bozo";
                 end = true;
-                OnStopMinigame();
             }
         }
     }
@@ -60,11 +62,5 @@ public class Pot : MinigameBase
         yield return new WaitForSeconds(3);
         ani.SetBool("isOpen", false);
         canPress = true;
-    }
-
-    public override void OnStopMinigame()
-    {
-        base.OnStopMinigame();
-        //TODO: add logic for if we won or lost
     }
 }
