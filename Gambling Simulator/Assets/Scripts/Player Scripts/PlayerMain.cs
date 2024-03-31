@@ -31,6 +31,8 @@ namespace Player_Scripts
 
         private void Start()
         {
+            Instance = this;
+
             playerMovement = GetComponent<PlayerMovement>();
             playerInteractionScript = GetComponent<PlayerInteractionScript>();
         }
