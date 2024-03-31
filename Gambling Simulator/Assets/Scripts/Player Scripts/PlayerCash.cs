@@ -22,6 +22,7 @@ public class PlayerCash : MonoBehaviour
     void Awake() {
         updateCashUI();
     }
+
     public static void updateCashUI() {
         if (cashText != null)
             cashText.text = cash.ToString();
