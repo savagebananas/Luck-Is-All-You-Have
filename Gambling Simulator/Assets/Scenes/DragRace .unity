@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f61db9b0a2e40379ab240c908f6e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelerationStrength: 5
+  accelerationStrength: 8
   rb: {fileID: 992020710}
 --- !u!1 &1232541780
 GameObject:

@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.52195, y: 0.60155, z: 0}
-    m_Extent: {x: 2.57215, y: 1.40475, z: 0}
+    m_Center: {x: -0.51690006, y: 0.59045, z: 0}
+    m_Extent: {x: 2.5702, y: 1.4052501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -598,8 +598,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.68280005, y: 0.046000004, z: 0}
-    m_Extent: {x: 1.1436, y: 0.5976, z: 0}
+    m_Center: {x: 0.6779, y: 0.03515002, z: 0}
+    m_Extent: {x: 1.1489, y: 0.59854996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256052498}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
@@ -2199,8 +2199,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29430002, y: 0.04424998, z: 0}
-    m_Extent: {x: 1.5253999, y: 0.59714997, z: 0}
+    m_Center: {x: 0.29295003, y: 0.042050004, z: 0}
+    m_Extent: {x: 1.53555, y: 0.59485, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2454,8 +2454,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.036049962, y: 0.090550005, z: 0}
-    m_Extent: {x: 2.2715502, y: 0.79405, z: 0}
+    m_Center: {x: -0.031349897, y: 0.094500005, z: 0}
+    m_Extent: {x: 2.28265, y: 0.7885, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8940,8 +8940,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.19965005, y: -0.92855, z: 0}
-    m_Extent: {x: 1.48455, y: 1.66505, z: 0}
+    m_Center: {x: -0.20279998, y: -0.92775, z: 0}
+    m_Extent: {x: 1.4902, y: 1.6664499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
