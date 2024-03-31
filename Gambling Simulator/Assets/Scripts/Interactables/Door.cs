@@ -50,6 +50,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         blackUIScreen.SetActive(true);
         blackUIScreen.GetComponent<Animator>().SetTrigger("FadeOut");
+
         yield return new WaitForSeconds(fadeToBlackClip.length);
         SceneManager.LoadScene(name);
     }
