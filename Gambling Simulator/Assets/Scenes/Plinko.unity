@@ -768,6 +768,7 @@ GameObject:
   - component: {fileID: 99821620}
   - component: {fileID: 99821619}
   - component: {fileID: 99821623}
+  - component: {fileID: 99821624}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -878,6 +879,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjects:
   - {fileID: 1373650671}
+--- !u!114 &99821624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99821618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8279b670347633449eba445a3e79a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daysLeftUI: {fileID: 1652807590}
+  timeUI: {fileID: 1284304016}
+  moneyUI: {fileID: 1251157423}
 --- !u!1 &114673466
 GameObject:
   m_ObjectHideFlags: 0
@@ -5921,7 +5937,7 @@ GameObject:
   - component: {fileID: 322893290}
   - component: {fileID: 322893289}
   m_Layer: 5
-  m_Name: Multiplier10x
+  m_Name: Multiplier20x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5966,7 +5982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10x
+  m_text: 20x
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f52383f70223eb4e908fce626a3039d, type: 2}
   m_sharedMaterial: {fileID: -5596249094243184944, guid: 2f52383f70223eb4e908fce626a3039d, type: 2}
@@ -6056,7 +6072,7 @@ GameObject:
   - component: {fileID: 327084119}
   - component: {fileID: 327084122}
   m_Layer: 0
-  m_Name: Basket 10x
+  m_Name: Basket 20x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6074,7 +6090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c1c6cc6bfb67d49aea28b83995e339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 10
+  multiplier: 20
 --- !u!212 &327084120
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8337,7 +8353,7 @@ GameObject:
   - component: {fileID: 908758887}
   - component: {fileID: 908758886}
   m_Layer: 5
-  m_Name: Multiplier10x
+  m_Name: Multiplier20x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8382,7 +8398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10x
+  m_text: 20x
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f52383f70223eb4e908fce626a3039d, type: 2}
   m_sharedMaterial: {fileID: -5596249094243184944, guid: 2f52383f70223eb4e908fce626a3039d, type: 2}
@@ -8891,7 +8907,7 @@ GameObject:
   - component: {fileID: 962145585}
   - component: {fileID: 962145588}
   m_Layer: 0
-  m_Name: Basket 2x
+  m_Name: Basket 3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8909,7 +8925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c1c6cc6bfb67d49aea28b83995e339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 2
+  multiplier: 3
 --- !u!212 &962145586
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9797,7 +9813,7 @@ GameObject:
   - component: {fileID: 1326162894}
   - component: {fileID: 1326162893}
   m_Layer: 5
-  m_Name: Multiplier2x
+  m_Name: Multiplier3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9842,7 +9858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2x
+  m_text: 3x
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f52383f70223eb4e908fce626a3039d, type: 2}
   m_sharedMaterial: {fileID: -5596249094243184944, guid: 2f52383f70223eb4e908fce626a3039d, type: 2}
@@ -10841,7 +10857,7 @@ GameObject:
   - component: {fileID: 1571401026}
   - component: {fileID: 1571401029}
   m_Layer: 0
-  m_Name: Basket 2x
+  m_Name: Basket 3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10859,7 +10875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c1c6cc6bfb67d49aea28b83995e339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 2
+  multiplier: 3
 --- !u!212 &1571401027
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12279,7 +12295,7 @@ GameObject:
   - component: {fileID: 2055321649}
   - component: {fileID: 2055321648}
   m_Layer: 5
-  m_Name: Multiplier2x
+  m_Name: Multiplier3x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12324,7 +12340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2x
+  m_text: 3x
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f52383f70223eb4e908fce626a3039d, type: 2}
   m_sharedMaterial: {fileID: -5596249094243184944, guid: 2f52383f70223eb4e908fce626a3039d, type: 2}
@@ -12414,7 +12430,7 @@ GameObject:
   - component: {fileID: 2077497494}
   - component: {fileID: 2077497497}
   m_Layer: 0
-  m_Name: Basket 10x
+  m_Name: Basket 20x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12432,7 +12448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c1c6cc6bfb67d49aea28b83995e339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 10
+  multiplier: 20
 --- !u!212 &2077497495
 SpriteRenderer:
   m_ObjectHideFlags: 0
