@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Casino Interior")
         {
             PlayMusic("Jazz1");
+            PlayMusic("CasinoAmbience");
         }
     }
 
