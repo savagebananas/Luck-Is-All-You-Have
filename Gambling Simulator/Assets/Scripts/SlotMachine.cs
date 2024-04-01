@@ -6,7 +6,6 @@ public class SlotMachine : MonoBehaviour
 {
     public Image[] slotReels; // Assign via Inspector
     public Sprite[] slotSymbols; // Assign via Inspector
-    public Button spinButton; // Assign via Inspector
     private bool isSpinning = false;
     private float spinDuration = 2.0f; // Duration of each reel spin
 
@@ -15,8 +14,13 @@ public class SlotMachine : MonoBehaviour
 
     void Start()
     {
-        spinButton.onClick.AddListener(() => StartCoroutine(SpinReels()));
     }
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space) && !isSpinning) {
+            StartCoroutine(SpinReels());
+        }
+    }
+
 
     private IEnumerator SpinReels()
     {
@@ -25,7 +29,6 @@ public class SlotMachine : MonoBehaviour
 
         PlayerCash.addCash(-spinCost);
         isSpinning = true;
-        spinButton.interactable = false; // Disable button during spin
 
         for (int i = 0; i < slotReels.Length; i++)
         {
@@ -35,7 +38,6 @@ public class SlotMachine : MonoBehaviour
 
         yield return new WaitForSeconds(spinDuration); // Wait for the last reel to stop
 
-        spinButton.interactable = true; // Re-enable the button after spinning
         isSpinning = false;
 
         CheckWinCondition();
