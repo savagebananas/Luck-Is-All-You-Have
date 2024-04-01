@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MoneyOnGround : MonoBehaviour
@@ -11,6 +12,7 @@ public class MoneyOnGround : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             PlayerCash.addCash(cashValue);
+            GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySFX("CashWin");
             Destroy(this.gameObject);
         }
     }

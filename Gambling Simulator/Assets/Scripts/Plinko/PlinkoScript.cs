@@ -20,7 +20,7 @@ public class PlinkoScript : MonoBehaviour
 
     public int costPerBall;
     public GameObject ballPrefab;
-    public float force;
+    public float spawnDeviation;
 
     public GameObject welcomeTextUI;
 
@@ -41,10 +41,17 @@ public class PlinkoScript : MonoBehaviour
             {
                 PlayerCash.addCash(-costPerBall);
                 var ball = Instantiate(ballPrefab);
-                ball.transform.position = new Vector2(transform.position.x + Random.RandomRange(-0.25f, 0.25f), transform.position.y);
+                ball.transform.position = new Vector2(transform.position.x + Random.RandomRange(-spawnDeviation, spawnDeviation), transform.position.y);
                 ball.GetComponent<Rigidbody2D>().gravityScale = Random.RandomRange(1, 2);
                 ball.GetComponent<Ball>().cost = costPerBall;
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(new Vector2(transform.position.x, transform.position.y), spawnDeviation/2);
+
     }
 }
