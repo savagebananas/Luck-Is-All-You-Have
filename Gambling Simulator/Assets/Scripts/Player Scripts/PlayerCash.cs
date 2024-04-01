@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerCash : MonoBehaviour
 {
-    private static int cash = 100;
+    private static int cash = 2000;
     public GameObject cashDisplay;
     public static TextMeshProUGUI cashText;
     void Start()
@@ -22,6 +22,7 @@ public class PlayerCash : MonoBehaviour
     void Awake() {
         updateCashUI();
     }
+
     public static void updateCashUI() {
         if (cashText != null)
             cashText.text = cash.ToString();

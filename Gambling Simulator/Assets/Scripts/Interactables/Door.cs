@@ -29,7 +29,6 @@ public class Door : MonoBehaviour, IInteractable
         if (buttonPressRequired)
         {
                 StartCoroutine(SwitchScene(sceneName));
-                SetPlayerPosition.lastPos = transform.position.x;
         }
 
     }
@@ -48,6 +47,21 @@ public class Door : MonoBehaviour, IInteractable
 
     IEnumerator SwitchScene(string name)
     {
+        // Set last position
+        if (SceneManager.GetActiveScene().name == "City") SetPreviousScenePlayerPosition.lastCityPos = transform.position.x;
+        if (SceneManager.GetActiveScene().name == "Casino Interior")
+        {
+            if (name == "City") // exiting casino to city
+            {
+                SetPreviousScenePlayerPosition.lastCasinoPos = -18.25f;
+            }
+            else // Casino to game
+            {
+                SetPreviousScenePlayerPosition.lastCasinoPos = transform.position.x;
+            }
+        }
+
+        // Visuals
         blackUIScreen.SetActive(true);
         blackUIScreen.GetComponent<Animator>().SetTrigger("FadeOut");
 

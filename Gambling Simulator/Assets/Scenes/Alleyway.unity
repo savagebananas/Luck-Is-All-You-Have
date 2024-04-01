@@ -1237,8 +1237,8 @@ RectTransform:
   - {fileID: 1966240672}
   - {fileID: 973035501}
   - {fileID: 1730182376}
-  - {fileID: 1164934397}
   - {fileID: 50032228}
+  - {fileID: 1164934397}
   m_Father: {fileID: 1115835140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2918,6 +2918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115835140}
+  - component: {fileID: 1115835141}
   m_Layer: 0
   m_Name: Setup
   m_TagString: Untagged
@@ -2945,6 +2946,20 @@ Transform:
   - {fileID: 1494550070}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115835141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115835139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0113d880cf2cf6428e525e543792a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 50032227}
 --- !u!1 &1164934396
 GameObject:
   m_ObjectHideFlags: 0
