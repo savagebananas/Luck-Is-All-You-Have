@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Dialogue;
 using Minigames;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEditor.Rendering.FilterWindow;
 
 public class KenoGame : MinigameBase
 {
@@ -11,8 +15,6 @@ public class KenoGame : MinigameBase
     public KenoBag playerBag;
     public KenoBag opponentBag;
     public int winningNumber;
-    public int potNum;
-    public int attempts;
     private bool canPress = true;
     private bool gameEnd = false;
     
@@ -23,14 +25,24 @@ public class KenoGame : MinigameBase
 
     // Visual
     public AnimationClip bagOpenClip;
+    public GameObject playerWinningLight;
+    public GameObject opponentWinningLight;
+    public GameObject playerLosingLight;
+    public GameObject opponentLosingLight;
+    public GameObject tieGameLight;
+
+    // Audio
+    public AudioManager audioManager;
 
     void Start()
     {
-        winningNumber = Random.Range(1, 21); // Number between 1 - 20
+        audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
+
+        winningNumber = Random.Range(1, 11); // Number between 1 - 10
         winningNumberText.text = winningNumber.ToString();
 
-        playerBag.FillBag(20);
-        opponentBag.FillBag(20);
+        playerBag.FillBag(10);
+        opponentBag.FillBag(10);
         coinsInBagText.text = "Coins Left: " + playerBag.availableNums.Count;
 
         playerBag.RemoveCoinUI();
@@ -44,31 +56,37 @@ public class KenoGame : MinigameBase
         {
             welcomeText.GetComponent<Animator>().SetTrigger("fadeOut");
 
-            int playerCoin = playerBag.DrawCoin();
-            int opponentCoin = opponentBag.DrawCoin();
+            playerBag.DrawCoin();
+            opponentBag.DrawCoin();
+
+            int playerCoin = playerBag.currentNum;
+            int opponentCoin = opponentBag.currentNum;
 
             coinsInBagText.text = "Coins Left: " + playerBag.availableNums.Count;
 
             if (playerCoin == opponentCoin && playerCoin == winningNumber)
             {
                 Debug.Log("Tie");
+                StartCoroutine(TieSequence());
                 gameEnd = true;
             }
             else if (playerCoin == winningNumber)
             {
                 Debug.Log("Player Win");
+                StartCoroutine(WinSequence());
+
                 gameEnd = true;
             }
             else if (opponentCoin == winningNumber)
             {
                 Debug.Log("Begger Win");
+                StartCoroutine(LoseSequence());
                 gameEnd = true;
             }
 
             // Bag Aniamtion
             playerBag.OpenBagVisual();
             opponentBag.OpenBagVisual();
-
 
             // Cooldown till next press
             StartCoroutine(canPressCooldown());
@@ -90,11 +108,50 @@ public class KenoGame : MinigameBase
 
         yield return new WaitForSeconds(bagOpenClip.length + 1);
 
-        playerBag.CloseBagVisual();
-        opponentBag.CloseBagVisual();
-        playerBag.RemoveCoinUI();
-        opponentBag.RemoveCoinUI();
+        if (!gameEnd)
+        {
+            playerBag.CloseBagVisual();
+            opponentBag.CloseBagVisual();
+            playerBag.RemoveCoinUI();
+            opponentBag.RemoveCoinUI();
 
-        canPress = true;
+            canPress = true;
+        }     
     }
+
+
+    #region Game Endings
+    IEnumerator TieSequence()
+    {
+        yield return new WaitForSeconds(bagOpenClip.length);
+        tieGameLight.SetActive(true);
+        StartCoroutine(ChangeSceneAfterDialogue(new string[2] { "seems like a tie", "next time you wont be so lucky" }, 999));
+        audioManager.PlaySFX("CashWin");
+    }
+
+    IEnumerator WinSequence()
+    {
+        yield return new WaitForSeconds(bagOpenClip.length);
+        playerWinningLight.SetActive(true);
+        opponentLosingLight.SetActive(true);
+        StartCoroutine(ChangeSceneAfterDialogue(new string[2] { "ARGGGHGHHHHH", "*You win and take the money before he gets too angry*" }, 4999));
+        audioManager.PlaySFX("CashWinBig");
+    }
+    IEnumerator LoseSequence()
+    {
+        yield return new WaitForSeconds(bagOpenClip.length);
+        playerLosingLight.SetActive(true);
+        opponentWinningLight.SetActive(true);
+        StartCoroutine(ChangeSceneAfterDialogue(new string[2] {"you snoosze you losze!", "*COUGH COUGH*"}, 0));
+    }
+
+    IEnumerator ChangeSceneAfterDialogue(string[] sentences, int moneyAdded)
+    {
+        yield return StartCoroutine(DialogueManager.Instance.AnimateText(sentences));
+        PlayerCash.addCash(moneyAdded);
+        if (moneyAdded > 0) audioManager.PlaySFX("CashWin");
+        GetComponent<MoveToScene>().GoToScene();
+    }
+
+    #endregion
 }

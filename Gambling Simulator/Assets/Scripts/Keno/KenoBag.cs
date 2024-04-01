@@ -6,7 +6,7 @@ using UnityEngine;
 public class KenoBag : MonoBehaviour
 {
     public List<int> availableNums = new List<int>();
-    private int currentNum;
+    public int currentNum;
 
     private Animator animator;
 
@@ -21,14 +21,12 @@ public class KenoBag : MonoBehaviour
     /// Draws Coin from bag by removing it and returning the number drawn
     /// </summary>
     /// <returns></returns>
-    public int DrawCoin()
+    public void DrawCoin()
     {
         // Draw number and remove it from bag
         int indexToRemove = Random.Range(0, availableNums.Count);
         currentNum = availableNums[indexToRemove];
-        availableNums.Remove(indexToRemove);
-
-        return currentNum;
+        availableNums.RemoveAt(indexToRemove);
     }
 
     /// <summary>

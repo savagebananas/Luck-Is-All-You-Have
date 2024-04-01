@@ -14,12 +14,12 @@ namespace NPC
         public string[] sentences;
         public Text textBox;
         public Talking TalkingState;
-        public void OnInteract()
+        public virtual void OnInteract()
         {
             StartCoroutine(_runInteraction());
         }
 
-        private IEnumerator _runInteraction()
+        public IEnumerator _runInteraction()
         {
             PlayerMain.Instance.playerMovement.canMove = false;
             PlayerMain.Instance.playerInteractionScript.canInteract = false;

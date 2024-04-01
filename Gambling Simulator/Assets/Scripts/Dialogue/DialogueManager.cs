@@ -46,7 +46,7 @@ namespace Dialogue
                 {
                     currentText = sentence.Substring(0, i + 1);
                     textBox.text = currentText;
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0.075f);
                 }
 
                 yield return new WaitUntil(() => progressToNextSentence);
