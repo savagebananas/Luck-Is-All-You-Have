@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Plinko.unity
     guid: e239b5da592ff4c37baffedd77094713
+  - enabled: 1
+    path: Assets/Scenes/SlotMachinePlay.unity
+    guid: 330857708263e4b9abadda2c73436e18
+  - enabled: 1
+    path: Assets/Scenes/Drug Store.unity
+    guid: c508659ed10c5ce4db728eed06a31417
   m_configObjects: {}

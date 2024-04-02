@@ -8,7 +8,7 @@ public class SlotMachine : MonoBehaviour
     public Sprite[] slotSymbols; // Assign via Inspector
     private bool isSpinning = false;
     private float spinDuration = 1.0f; // Duration of each reel spin
-    public const int spinCost = 250;
+    public const int spinCost = 500;
     public GameObject welcome;
 
     private int timesLost = 0;
@@ -32,20 +32,38 @@ public class SlotMachine : MonoBehaviour
         PlayerCash.addCash(-spinCost);
         isSpinning = true;
 
-        int randomTile = Random.Range(0, slotSymbols.Length);
+        // Increasing chance to win
+        // More losing = more chance to win
+        int randomChance = Random.Range(1, 51);
+        int randomTile = Random.Range(1, slotSymbols.Length); // Random Tile for win event (not including jackpot)
 
-        for (int i = 0; i < slotReels.Length; i++)
+        // Win Event 
+        if (randomChance <= timesLost) 
         {
-            StartCoroutine(SpinReel(slotReels[i], randomTile));
-            yield return new WaitForSeconds(.3f); // Stagger the start of each reel spin
+            for (int i = 0; i < slotReels.Length; i++)
+            {
+                StartCoroutine(SpinReel(slotReels[i], randomTile, true));
+                yield return new WaitForSeconds(.3f); // Stagger the start of each reel spin
+            }
         }
+        // Normal Event
+        else
+        {
+            for (int i = 0; i < slotReels.Length; i++)
+            {
+                StartCoroutine(SpinReel(slotReels[i], randomTile, false));
+                yield return new WaitForSeconds(.3f); // Stagger the start of each reel spin
+            }
+        }
+
+
 
         yield return new WaitForSeconds(spinDuration); // Wait for the last reel to stop
 
         CheckWinCondition();
     }
 
-    private IEnumerator SpinReel(Image reel, int randomTile)
+    private IEnumerator SpinReel(Image reel, int randomTile, bool winEvent)
     {
         float endTime = Time.time + spinDuration;
 
@@ -56,12 +74,9 @@ public class SlotMachine : MonoBehaviour
             yield return new WaitForSeconds(0.05f); // Time between symbol changes to simulate spinning
         }
 
-        // Increasing chance to win
-        // More losing = more chance to win
-        int randomChance = Random.Range(1, 101);
-        if (randomChance <= timesLost) // Win Event 
+        if (winEvent)
         {
-            Debug.Log("BiG NIGGA GAY");
+            Debug.Log("Win Event Slot: " + randomTile);
             reel.sprite = slotSymbols[randomTile];
         }
     }

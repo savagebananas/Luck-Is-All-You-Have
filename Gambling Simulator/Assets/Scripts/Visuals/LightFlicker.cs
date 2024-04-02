@@ -13,6 +13,8 @@ public class LightFlicker : MonoBehaviour
     public float maxFlicker;
     float interval;
 
+    bool lightOn = true;
+
     void Start()
     {
         light = GetComponent<Light2D>(); // get light 2D
@@ -30,14 +32,16 @@ public class LightFlicker : MonoBehaviour
 
     void ToggleLight()
     {
-        light.enabled = !light.enabled;
-        if (light.enabled)
+        lightOn = !lightOn;
+        if (lightOn)
         {
             interval = UnityEngine.Random.Range(0, maxWait);
+            light.color = new Color(1, 1, 1, 1); 
         }
         else
         {
             interval = UnityEngine.Random.Range(0, maxFlicker);
+            light.color = new Color(1, 1, 1, 0.5f);
         }
 
         timer = 0;
