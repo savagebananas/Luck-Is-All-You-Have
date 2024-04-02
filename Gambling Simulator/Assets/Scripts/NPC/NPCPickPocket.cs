@@ -12,6 +12,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
         Poor,
         Rich
     }
+    public GameObject interactionLight;
     private int cash;
     public NPCType type;
     
@@ -59,6 +60,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     void Start()
     {
         randomizeCash();
+        
     }
 
     // Update is called once per frame
