@@ -24,6 +24,8 @@ public class PlinkoScript : MonoBehaviour
 
     public GameObject welcomeTextUI;
 
+    public AudioManager audioManager;
+
     void Start()
     {
         //toggle = Random.RandomRange(1, 7);
@@ -44,6 +46,9 @@ public class PlinkoScript : MonoBehaviour
                 ball.transform.position = new Vector2(transform.position.x + Random.RandomRange(-spawnDeviation, spawnDeviation), transform.position.y);
                 ball.GetComponent<Rigidbody2D>().gravityScale = Random.RandomRange(1, 2);
                 ball.GetComponent<Ball>().cost = costPerBall;
+
+                // Play sound
+                audioManager.PlaySFX("Release Ball");
             }
         }
     }

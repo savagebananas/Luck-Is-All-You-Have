@@ -36,6 +36,11 @@ public class AudioManager : MonoBehaviour
             PlayMusic("Jazz1");
             PlayMusic("CasinoAmbience");
         }
+
+        if (SceneManager.GetActiveScene().name == "Plinko")
+        {
+            PlayMusic("Plinko");
+        }
     }
 
     public void PlayMusic(string name) 
@@ -65,8 +70,16 @@ public class AudioManager : MonoBehaviour
         {
             if (name == "CashWin") sfxSource.time = 0.2f;
             if (name == "CashBig") sfxSource.time = 0.2f;
+            if (name == "Race Countdown") sfxSource.time = 0.1f;
+            if (name == "Cars Revving") sfxSource.time = 3;
+            if (name == "Cars Driving") sfxSource.time = 0;
 
             sfxSource.PlayOneShot(s.clip);
         }
+    }
+
+    public void StopMusic()
+    {
+        musicSource.Stop();
     }
 }

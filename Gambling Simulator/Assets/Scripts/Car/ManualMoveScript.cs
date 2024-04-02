@@ -9,7 +9,10 @@ public class ManualMoveScript : MonoBehaviour
     public Rigidbody2D rb;
     public int frames;
     private bool start = false;
-    // Start is called before the first frame update
+
+    bool firstPress = true;
+    public Vector2 speedDifference;
+
     void Start()
     {
         StartCoroutine(resetTimer());
@@ -26,25 +29,34 @@ public class ManualMoveScript : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                if (firstPress)
+                {
+                    rb.velocity = Vector2.right * 10;
+                    firstPress = false;
+                }
                 if (rb.velocity.magnitude < 50)
                 {
                     accelerate();
+                    speedDifference -= Vector2.right * .5f;
                     frames--;
                 }
             }
             else
             {
-                if (rb.velocity.magnitude > 0)
+                if (rb.velocity.x > 20)
                 {
                     decelerate();
                     frames--;
                 }
             }
         }
+
+
+        Visuals();
     }
     void accelerate()
     {
-        rb.velocity += accelerationStrength*Time.deltaTime*Vector2.right;
+        rb.velocity += accelerationStrength*Time.deltaTime*Vector2.right*0.5f;
     }
     void decelerate()
     {
@@ -53,8 +65,20 @@ public class ManualMoveScript : MonoBehaviour
     }
     IEnumerator resetTimer()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         start = true;
         rb.velocity += 150 * Time.deltaTime * Vector2.right;
+    }
+
+    void Visuals()
+    {
+        if (rb.velocity.x > 0)
+        {
+            GetComponent<Animator>().SetTrigger("Drive");
+        }
+        else
+        {
+            GetComponent<Animator>().SetTrigger("Stop");
+        }
     }
 }

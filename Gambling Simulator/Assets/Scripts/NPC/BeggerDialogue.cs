@@ -51,11 +51,14 @@ namespace NPC
         {
             base.OnFinishNPCInteraction();
 
-            PlayerCash.addCash(-999);
-            GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySFX("CashWin");
-            if (canPlayGame) GetComponent<MoveToScene>().GoToScene();
+            if (canPlayGame)
+            {
+                GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySFX("CashWin");
+                PlayerCash.addCash(-999);
+                GetComponent<MoveToScene>().GoToScene();
+            }
 
-            Debug.Log("Finished NPC interaction");
+                Debug.Log("Finished NPC interaction");
         }
     }
 }
