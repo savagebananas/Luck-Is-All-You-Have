@@ -101,9 +101,11 @@ GameObject:
   - component: {fileID: 195436581597752690}
   - component: {fileID: 7241788980546527296}
   - component: {fileID: 5180025016425418701}
+  - component: {fileID: 6585513699979372948}
+  - component: {fileID: 8438503320939851209}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,3 +326,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6585513699979372948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256177857754012607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2439c06a1ca524ca58e7a4889c467b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finder: {fileID: 0}
+  player: {fileID: 0}
+  button: {fileID: 0}
+  mapLeftBound: -70
+  mapRightBound: 110
+  minDistance: 10
+  maxDistance: 20
+--- !u!114 &8438503320939851209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256177857754012607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f249ff5d8b3242f9a0ad7924418e1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackUIScreen: {fileID: 0}
+  finder: {fileID: 0}
+  fadeOut: {fileID: 0}
+  fadeIn: {fileID: 0}
+  timeSys: {fileID: 0}
