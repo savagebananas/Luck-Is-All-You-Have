@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class Idle : State
 {
-    public float timeOfNextState;
+    public float timeOfNextState = 0;
     public float nextWalkToPointTime;
 
     public State walkToPointState;
     public State randomRoamState;
+    public NPCPickPocket pickPocket;
 
     public override void OnStart()
     {
-        Debug.Log("Idle State");
         timeOfNextState = TimeSystem.time + Random.Range(0.08f, 0.2f); // 1f = 1 hour in-game time
+        if (pickPocket!=null) pickPocket.interactable = true;
     }
 
     public override void OnUpdate()

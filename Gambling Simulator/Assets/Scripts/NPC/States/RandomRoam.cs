@@ -12,15 +12,20 @@ public class RandomRoam : State
     private GameObject npc;
 
     public State idleState;
+    public NPCPickPocket pickPocket;
 
     public override void OnStart()
     {
-        Debug.Log("Random Roam State");
 
         npc = transform.parent.parent.gameObject;
         speed = npc.GetComponent<NPCMain>().walkSpeed;
 
-        nextPos = new Vector2(transform.position.x + Random.RandomRange(-15, 15), transform.position.y);
+        nextPos = new Vector2(transform.position.x + Random.Range(-15, 15), transform.position.y);
+        if (pickPocket != null)
+        {
+            pickPocket.OnInteractionDeselected();
+            pickPocket.interactable = false;
+        }
     }
 
     public override void OnUpdate()

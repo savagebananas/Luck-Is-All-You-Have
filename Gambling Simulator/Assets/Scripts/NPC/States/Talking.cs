@@ -4,9 +4,14 @@ namespace NPC.States
 {
     public class Talking : State
     {
+        public NPCPickPocket pickPocket;
+
         public override void OnStart()
         {
-            Debug.Log("Talking state.");
+            if (pickPocket!=null) {
+            pickPocket.OnInteractionDeselected();
+            pickPocket.interactable = false;
+        }
         }
 
         public override void OnUpdate()

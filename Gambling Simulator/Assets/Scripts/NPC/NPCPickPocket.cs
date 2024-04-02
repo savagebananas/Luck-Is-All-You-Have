@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Interactables;
 using Unity.Mathematics;
 using UnityEngine;
+using TMPro;
 
 public class NPCPickPocket : MonoBehaviour, IInteractable
 {
@@ -30,6 +31,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     public static GameObject player;
     public ObjectFinder finder;
     public AudioManager audioManager;
+    public TextMeshProUGUI stealText;
 
 
      public void OnInteract()
@@ -52,11 +54,16 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
 
     public void OnInteractionDeselected()
     {
+        stealText.gameObject.SetActive(false);
+
     }
 
     public void OnInteractSelected()
     {
+        if (!interactable) return;
         if (interactionLight != null) interactionLight.SetActive(true);
+        stealText.gameObject.SetActive(true);
+
 
     }
      public void InteractSelectedLoop()
@@ -73,6 +80,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
         }
         player = finder.player;
         audioManager = finder.audioManager;
+        stealText.gameObject.SetActive(false);
         
         
     }

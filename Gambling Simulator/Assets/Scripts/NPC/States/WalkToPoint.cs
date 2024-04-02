@@ -15,16 +15,20 @@ public class WalkToPoint : State
 
     public State idleState;
     private float nextWalkToPointTime; // time till npc goes to new destination
+    public NPCPickPocket pickPocket;
 
     public override void OnStart()
     {
-        Debug.Log("Walk To Point State");
 
         npc = transform.parent.parent.gameObject;
         locations = GetComponentInParent<NPCMain>().locations;
         times = GetComponentInParent<NPCMain>().times;
         speed = GetComponentInParent<NPCMain>().walkSpeed;
         SetNextPosition();
+        if (pickPocket!=null) {
+            pickPocket.OnInteractionDeselected();
+            pickPocket.interactable = false;
+        }
     }
 
     public override void OnUpdate()
