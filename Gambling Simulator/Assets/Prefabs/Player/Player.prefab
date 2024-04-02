@@ -92,17 +92,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6876324646849128161}
-  - component: {fileID: 5769086666918438428}
-  - component: {fileID: 3644134864961600594}
-  - component: {fileID: 2301374458814569169}
-  - component: {fileID: 5937792145779987615}
-  - component: {fileID: 5126511991220609749}
-  - component: {fileID: 195436581597752690}
-  - component: {fileID: 7241788980546527296}
-  - component: {fileID: 5180025016425418701}
+  - component: {fileID: 2471455879997925031}
+  - component: {fileID: 9123212397886369291}
+  - component: {fileID: 862970508106209884}
+  - component: {fileID: 4901692080783357127}
+  - component: {fileID: 7875146220152576460}
+  - component: {fileID: 4067805335114268003}
+  - component: {fileID: 5910094103803217651}
+  - component: {fileID: 1981380222656968569}
+  - component: {fileID: 7240087113661694844}
   - component: {fileID: 6585513699979372948}
-  - component: {fileID: 8438503320939851209}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -119,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 6371874535309591578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.700035, y: 0.75, z: 0}
+  m_LocalPosition: {x: 66.8, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -167,9 +166,9 @@ SpriteRenderer:
   m_SortingLayerID: 732433923
   m_SortingLayer: 4
   m_SortingOrder: -1
-  m_Sprite: {fileID: -134871298, guid: 4d0cb474149f5b542bc1ec47f82bc68b, type: 3}
+  m_Sprite: {fileID: -1462910199, guid: 4d0cb474149f5b542bc1ec47f82bc68b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2, y: 2}
@@ -262,8 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edace03658a24869ab1e1e1ad547bc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 4067805335114268003}
-  playerInteractionScript: {fileID: 5910094103803217651}
+  playerMovement: {fileID: 0}
+  playerInteractionScript: {fileID: 0}
 --- !u!114 &4067805335114268003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentGameObjectInteratcable: {fileID: 0}
-  canInteract: 1
+  canInteract: 0
 --- !u!114 &1981380222656968569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +331,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3256177857754012607}
+  m_GameObject: {fileID: 6371874535309591578}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2439c06a1ca524ca58e7a4889c467b6f, type: 3}
@@ -345,20 +344,3 @@ MonoBehaviour:
   mapRightBound: 110
   minDistance: 10
   maxDistance: 20
---- !u!114 &8438503320939851209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3256177857754012607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f249ff5d8b3242f9a0ad7924418e1ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blackUIScreen: {fileID: 0}
-  finder: {fileID: 0}
-  fadeOut: {fileID: 0}
-  fadeIn: {fileID: 0}
-  timeSys: {fileID: 0}

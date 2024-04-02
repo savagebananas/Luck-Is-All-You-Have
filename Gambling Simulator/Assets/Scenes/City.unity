@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.5188, y: 0.59790003, z: 0}
-    m_Extent: {x: 2.565, y: 1.4025, z: 0}
+    m_Center: {x: -0.52985, y: 0.6006501, z: 0}
+    m_Extent: {x: 2.57145, y: 1.40435, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -831,8 +831,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.67575, y: 0.045900017, z: 0}
-    m_Extent: {x: 1.13805, y: 0.59720004, z: 0}
+    m_Center: {x: 0.67795, y: 0.043449998, z: 0}
+    m_Extent: {x: 1.14925, y: 0.59495, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2241,6 +2241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3256177857754012607, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6585513699979372948, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
       propertyPath: button
       value: 
@@ -2292,7 +2296,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3256177857754012607, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1905636719}
   m_SourcePrefab: {fileID: 100100000, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
 --- !u!1 &256052498
 GameObject:
@@ -5078,8 +5085,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29004997, y: 0.042549998, z: 0}
-    m_Extent: {x: 1.5264499, y: 0.59825003, z: 0}
+    m_Center: {x: 0.29565, y: 0.04124999, z: 0}
+    m_Extent: {x: 1.53185, y: 0.60205, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11519,8 +11526,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.027999997, y: 0.086649984, z: 0}
-    m_Extent: {x: 2.2786002, y: 0.78575003, z: 0}
+    m_Center: {x: -0.03575003, y: 0.085999995, z: 0}
+    m_Extent: {x: 2.2852502, y: 0.78559995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17772,6 +17779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateMachine: {fileID: 1435301196}
   animator: {fileID: 1934691164}
+  pickPocket: {fileID: 0}
 --- !u!1 &1323546625
 GameObject:
   m_ObjectHideFlags: 0
@@ -24253,6 +24261,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1785935523
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1801617345503611520, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_Name
+      value: NPCSteal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834329050673899701, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d554c70123304489f83febc5ab8a4abf, type: 3}
 --- !u!1 &1790960918
 GameObject:
   m_ObjectHideFlags: 0
@@ -24905,8 +24970,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.20464998, y: -0.93095, z: 0}
-    m_Extent: {x: 1.4777501, y: 1.67225, z: 0}
+    m_Center: {x: -0.20255, y: -0.92130005, z: 0}
+    m_Extent: {x: 1.4844501, y: 1.6725, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25010,6 +25075,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3256177857754012607, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
   m_PrefabInstance: {fileID: 247440772}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1905636719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905636708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2439c06a1ca524ca58e7a4889c467b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finder: {fileID: 0}
+  player: {fileID: 0}
+  button: {fileID: 1420324111}
+  mapLeftBound: -70
+  mapRightBound: 110
+  minDistance: 10
+  maxDistance: 20
 --- !u!1 &1906860400
 GameObject:
   m_ObjectHideFlags: 0
@@ -28024,6 +28108,7 @@ SceneRoots:
   - {fileID: 831103267}
   - {fileID: 247440772}
   - {fileID: 2655524223202542061}
+  - {fileID: 1785935523}
   - {fileID: 1906860401}
   - {fileID: 3979195444118364027}
   - {fileID: 256052500}
