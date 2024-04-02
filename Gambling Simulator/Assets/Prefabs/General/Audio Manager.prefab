@@ -196,6 +196,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 213ac6715d633774da84788f2559c119, type: 3}
   - name: Release Ball
     clip: {fileID: 8300000, guid: 268f3dcce4e676b468f6b88868f300a8, type: 3}
+  - name: Slot Jackpot
+    clip: {fileID: 8300000, guid: 9f6189003966f36499bb04cf9c201e46, type: 3}
+  - name: Slot Win
+    clip: {fileID: 8300000, guid: 5f3958e4ee3be784c96f9369b41138d8, type: 3}
   musicSource: {fileID: 205292297482700334}
   sfxSource: {fileID: 7030921442261656618}
 --- !u!1 &6527105304303650137
