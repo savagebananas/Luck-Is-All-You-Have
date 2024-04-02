@@ -1,23 +1,29 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class SlotMachine : MonoBehaviour
 {
     public Image[] slotReels; // Assign via Inspector
     public Sprite[] slotSymbols; // Assign via Inspector
     private bool isSpinning = false;
     private float spinDuration = 2.0f; // Duration of each reel spin
-
+    private int tries = 10;
     public const int spinCost = 100;
-
-
+    public TextMeshProUGUI welcome;
+    public TextMeshProUGUI jackpot;
+    public TextMeshProUGUI gameOver;
+    public TextMeshProUGUI attempts;
     void Start()
     {
+        welcome.text = "Press space to play, you have 10 attempts!";
     }
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space) && !isSpinning) {
+        if (Input.GetKeyDown(KeyCode.Space) && !isSpinning && tries!=0) {
+            welcome.text = "";
+            jackpot.text = "";
             StartCoroutine(SpinReels());
+            tries--;
         }
     }
 
@@ -39,7 +45,11 @@ public class SlotMachine : MonoBehaviour
         yield return new WaitForSeconds(spinDuration); // Wait for the last reel to stop
 
         isSpinning = false;
-
+        attempts.text = "Attempts left:" + tries.ToString();
+        if (tries == 0)
+        {
+            gameOver.text = "Game over! Thanks for playing!";
+        }
         CheckWinCondition();
     }
 
@@ -67,11 +77,14 @@ public class SlotMachine : MonoBehaviour
             //Give Payouts based on symbol
             if (s1 == seven) {
                 PlayerCash.addCash(7000);
+                jackpot.text = "Jackpot!!";
             }
             if (s1 == horseShoe) {
                 PlayerCash.addCash(5000);
+                jackpot.text = "Three horshoes!!";
             } else {
                 PlayerCash.addCash(3000);
+                jackpot.text = "Three fruits!!";
             }
             
         }
