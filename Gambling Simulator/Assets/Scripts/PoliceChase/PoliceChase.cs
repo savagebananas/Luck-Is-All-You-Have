@@ -16,6 +16,8 @@ public class PoliceChase : MonoBehaviour
     public static float mapRightBound = 110;
     public static float minDistance = 10;
     public static float maxDistance = 20;
+    private static float leftY = -1.27f;
+    private static float rightY = -0.29f;
 
      public static void StartChase() {
         //ADD ANIMATION OR SIREN HERE
@@ -38,31 +40,36 @@ public class PoliceChase : MonoBehaviour
             policeCarLeft = finder.policeCarLeft;
             policeCarRight = finder.policeCarRight;
         }
+         // Instantiate car
         GameObject car;
         Vector3 pos = player.transform.position;
-
-         // Instantiate car
+        Vector3 carPos;
         float min;
         float max;         
          if (left) {
             min = pos.x + minDistance;
             if (min >= mapRightBound) return null;
             max = MathF.Min(pos.x+maxDistance, mapRightBound);
-            policeCar.GetComponent<SpriteRenderer>().sprite = policeCarLeft;
+            carPos =new Vector3(UnityEngine.Random.Range(min, max), leftY, pos.z);
+            car = Instantiate(policeCar, carPos, Quaternion.identity);
+            car.GetComponent<SpriteRenderer>().sprite = policeCarLeft;
+
+
+
         } else {
             min = pos.x - minDistance;
             if (min <= mapLeftBound) return null;
             max = MathF.Max(pos.x-maxDistance, mapLeftBound);
-            policeCar.GetComponent<SpriteRenderer>().sprite = policeCarRight;
+            carPos =new Vector3(UnityEngine.Random.Range(min, max), rightY, pos.z);
+            car = Instantiate(policeCar, carPos, Quaternion.identity);            
+            car.GetComponent<SpriteRenderer>().sprite = policeCarRight;
         }
-        Vector3 carPos =new Vector3(UnityEngine.Random.Range(min, max), pos.y, pos.z);
-        car = Instantiate(policeCar, carPos, Quaternion.identity);
          
         // Set car move script to move left or right
-        car.GetComponent<CarMoveScript>().goingLeft = left;
+        car.GetComponent<PoliceCarMove>().goingLeft = left;
          
-        car.GetComponent<CarMoveScript>().leftBound = mapLeftBound;
-        car.GetComponent<CarMoveScript>().rightBound = mapRightBound;
+        car.GetComponent<PoliceCarMove>().leftBound = mapLeftBound;
+        car.GetComponent<PoliceCarMove>().rightBound = mapRightBound;
 
         // Setting sorting layer of sprites depending on moving left or right
         if (left) car.GetComponent<SpriteRenderer>().sortingOrder = 1;
