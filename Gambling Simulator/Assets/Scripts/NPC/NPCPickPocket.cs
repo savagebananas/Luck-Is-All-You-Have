@@ -32,13 +32,16 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     public ObjectFinder finder;
     public AudioManager audioManager;
     public TextMeshProUGUI stealText;
+    public StateMachine sm;
+    public Idle idle;
 
 
      public void OnInteract()
     {
-        if (!interactable) return;
+        if (!interactable || sm.CurrentState != idle) return;
         if (UnityEngine.Random.Range(0, 100) > failChance) {
             pickPocket();
+            interactable = false;
         } else {
             player.GetComponent<PoliceChase>().StartChase();
         }
@@ -60,7 +63,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
 
     public void OnInteractSelected()
     {
-        if (!interactable) return;
+        if (!interactable || sm.CurrentState != idle) return;
         if (interactionLight != null) interactionLight.SetActive(true);
         stealText.gameObject.SetActive(true);
 
@@ -94,6 +97,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
         if (timeLeft <= 0 && cash <=0) {
             timeLeft = 0;
             randomizeCash();
+            interactable = true;
         }
     }
     public void randomizeCash() {

@@ -56,7 +56,8 @@ public class PlayerJob : MonoBehaviour
     }
     public void work() {
         if (blackUIScreen == null) {
-            finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
+
+            if (finder==null)finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
             blackUIScreen = finder.blackUIScreen;
         }
         if (isActive && canWork) {

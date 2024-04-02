@@ -1575,7 +1575,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.7621, y: -2.7878857, z: -13.853415}
+  m_LocalPosition: {x: -31.757507, y: -2.7878857, z: -13.853415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2056,6 +2056,7 @@ MonoBehaviour:
   buttonPressRequired: 1
   blackUIScreen: {fileID: 1650203935}
   fadeToBlackClip: {fileID: 7400000, guid: e9c0ca62996d1e54db9ed76192fb46f4, type: 2}
+  player: {fileID: 0}
 --- !u!1 &720048998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,14 +4195,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3644134864961600594, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3644134864961600594, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6876324646849128161, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.25
@@ -6103,6 +6096,7 @@ MonoBehaviour:
   buttonPressRequired: 1
   blackUIScreen: {fileID: 1650203935}
   fadeToBlackClip: {fileID: 7400000, guid: e9c0ca62996d1e54db9ed76192fb46f4, type: 2}
+  player: {fileID: 0}
 --- !u!58 &2067852981
 CircleCollider2D:
   m_ObjectHideFlags: 0

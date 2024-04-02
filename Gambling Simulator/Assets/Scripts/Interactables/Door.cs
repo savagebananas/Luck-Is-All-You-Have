@@ -18,6 +18,11 @@ public class Door : MonoBehaviour, IInteractable
     // UI Visuals
     public GameObject blackUIScreen;
     public AnimationClip fadeToBlackClip;
+    public GameObject player;
+
+    void Start() {
+        if (player == null) player = GameObject.FindWithTag("Player");
+    }
 
     public void InteractSelectedLoop()
     {
@@ -47,6 +52,8 @@ public class Door : MonoBehaviour, IInteractable
 
     IEnumerator SwitchScene(string name)
     {
+        if (player !=null)
+            player.GetComponent<Collider2D>().enabled = false;
         // Set last position
         if (SceneManager.GetActiveScene().name == "City") SetPreviousScenePlayerPosition.lastCityPos = transform.position.x;
         if (SceneManager.GetActiveScene().name == "Casino Interior")
@@ -66,6 +73,8 @@ public class Door : MonoBehaviour, IInteractable
         blackUIScreen.GetComponent<Animator>().SetTrigger("FadeOut");
 
         yield return new WaitForSeconds(fadeToBlackClip.length);
+        if (player !=null)
+            player.GetComponent<Collider2D>().enabled = true;
         SceneManager.LoadScene(name);
     }
 
