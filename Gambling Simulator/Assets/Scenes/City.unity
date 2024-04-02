@@ -2296,6 +2296,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3256177857754012607, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1905636717}
+    - targetCorrespondingSourceObject: {fileID: 3256177857754012607, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1905636726}
   m_SourcePrefab: {fileID: 100100000, guid: 835ad8cc06b3a3940a26fbf614e55ad0, type: 3}
 --- !u!1 &256052498
 GameObject:
@@ -5733,6 +5736,11 @@ MonoBehaviour:
   policeCarLeft: {fileID: 21300000, guid: e0adda57870ec57479fd1eb13e46f942, type: 3}
   policeCarRight: {fileID: 21300000, guid: 75d2946a756631f4a9486ef6200786e1, type: 3}
   cashText: {fileID: 954110366}
+  audioManager: {fileID: 1998819283}
+  blackUIScreen: {fileID: 50032227}
+  fadeOut: {fileID: 7400000, guid: e9c0ca62996d1e54db9ed76192fb46f4, type: 2}
+  fadeIn: {fileID: 7400000, guid: 0202e07d267d44e4fa32053908f37063, type: 2}
+  timeSys: {fileID: 999414164}
 --- !u!1 &555292225
 GameObject:
   m_ObjectHideFlags: 0
@@ -14495,7 +14503,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   daysLeft: 9
-  secondsPerGameDay: 360
+  secondsPerGameDay: 3607
+  newDay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   gradient:
     serializedVersion: 2
     key0: {r: 0.17254902, g: 0.18431373, b: 0.40784314, a: 1}
@@ -25004,6 +25027,23 @@ MonoBehaviour:
   mapRightBound: 110
   minDistance: 10
   maxDistance: 20
+--- !u!114 &1905636726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905636708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f249ff5d8b3242f9a0ad7924418e1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackUIScreen: {fileID: 0}
+  finder: {fileID: 0}
+  fadeOut: {fileID: 0}
+  fadeIn: {fileID: 0}
+  timeSys: {fileID: 0}
 --- !u!1 &1906860400
 GameObject:
   m_ObjectHideFlags: 0
@@ -25903,6 +25943,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1998819283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+  m_PrefabInstance: {fileID: 874934677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b2e9ec502c1354b83e78d0b4442b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023389322
 GameObject:
   m_ObjectHideFlags: 0
@@ -28012,3 +28063,4 @@ SceneRoots:
   - {fileID: 256052500}
   - {fileID: 1915486502}
   - {fileID: 1323546627}
+  - {fileID: 2106354523}

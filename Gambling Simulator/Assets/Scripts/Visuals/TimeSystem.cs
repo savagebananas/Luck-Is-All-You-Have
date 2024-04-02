@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Events;
 
 public class TimeSystem : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class TimeSystem : MonoBehaviour
     public static float time;
     private float timePercentage;
     private static float startTime;
+    public UnityEvent newDay;
 
     // Color and Light
     [SerializeField] private Gradient gradient;
@@ -67,6 +69,7 @@ public class TimeSystem : MonoBehaviour
 
             // Update UI for Days Left
             daysLeftText.text = "Days Left: " + daysLeft;
+            newDay.Invoke();
         }
         
         
