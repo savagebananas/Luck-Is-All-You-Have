@@ -38,6 +38,7 @@ namespace Player_Scripts
                 if (_currentlySelectedInteractable == null || _currentlySelectedInteractable != interactable)
                 {
                     Debug.Log("Setting interactable!");
+                    if (_currentlySelectedInteractable != null) _currentlySelectedInteractable.OnInteractionDeselected();
                     _currentGameObjectInteratcable = other.gameObject;
                     _currentlySelectedInteractable = interactable;
                     _currentlySelectedInteractable.OnInteractSelected();
