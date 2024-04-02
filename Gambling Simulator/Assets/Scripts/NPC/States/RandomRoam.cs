@@ -21,6 +21,9 @@ public class RandomRoam : State
         speed = npc.GetComponent<NPCMain>().walkSpeed;
 
         nextPos = new Vector2(transform.position.x + Random.Range(-15, 15), transform.position.y);
+
+        Debug.Log(nextPos.x + ", " + nextPos.y);
+
         if (pickPocket != null)
         {
             pickPocket.OnInteractionDeselected();

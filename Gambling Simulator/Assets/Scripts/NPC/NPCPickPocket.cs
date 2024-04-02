@@ -5,6 +5,7 @@ using Interactables;
 using Unity.Mathematics;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class NPCPickPocket : MonoBehaviour, IInteractable
 {
@@ -13,9 +14,6 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
         Poor,
         Rich
     }
-    public GameObject interactionLight;
-    private int cash;
-    public NPCType type;
     
     [Header("Cash Range Values")]
     public static int poorMin = 50;
@@ -24,19 +22,26 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     public static int normalMax = 700;
     public static int richMin = 500;
     public static int richMax = 1500;
-    public static float stealCoolDown = 200f;
-    public bool interactable = true;
+
+    public NPCType type;
+    private int cash;
     public float failChance = 25;
+    public static float stealCoolDown = 200f;
     private float timeLeft = 0;
+
+    public bool interactable = true;
+
+    [Header("References")]
     public static GameObject player;
     public ObjectFinder finder;
-    public AudioManager audioManager;
+    private AudioManager audioManager;
     public TextMeshProUGUI stealText;
+    public GameObject interactionLight;
     public StateMachine sm;
     public Idle idle;
 
 
-     public void OnInteract()
+    public void OnInteract()
     {
         if (!interactable || sm.CurrentState != idle) return;
         if (UnityEngine.Random.Range(0, 100) > failChance) {
@@ -48,15 +53,28 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     }
     private void pickPocket() {
         //ADD UI STUFF HERE
+
+        // Add Cash to player
         audioManager.PlaySFX("CashWin");
         PlayerCash.addCash(cash);
-        cash = 0;
+        
+        // Reset cooldown and randomize cash for next pickpocket
         timeLeft = stealCoolDown;
+        randomizeCash();
     }
-   
+
+    private void CallPolice()
+    {
+        // Reset cooldown, player cant steal
+        timeLeft = stealCoolDown;
+
+        player.GetComponent<PoliceChase>().StartChase();
+    }
+
 
     public void OnInteractionDeselected()
     {
+        Debug.Log("Deselected");
         stealText.gameObject.SetActive(false);
 
     }
@@ -64,16 +82,18 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     public void OnInteractSelected()
     {
         if (!interactable || sm.CurrentState != idle) return;
-        if (interactionLight != null) interactionLight.SetActive(true);
-        stealText.gameObject.SetActive(true);
-
-
+        
+        // Cooldown over, indicate choice for pickpocket
+        if (timeLeft <= 0)
+        {
+            if (interactionLight != null) interactionLight.SetActive(true);
+            stealText.gameObject.SetActive(true);
+        }
     }
      public void InteractSelectedLoop()
     {
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         randomizeCash();
@@ -88,7 +108,6 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timeLeft>0) {
