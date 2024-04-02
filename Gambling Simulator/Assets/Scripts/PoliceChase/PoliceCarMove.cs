@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Player_Scripts;
 using UnityEngine;
 using UnityEngine.U2D;
 
@@ -13,6 +14,14 @@ public class PoliceCarMove : MonoBehaviour
     private void Start()
     {
        
+    }
+
+    void OnTriggerEnter2D(Collider2D otherCollider) {
+        GameObject g = otherCollider.gameObject;
+        if (g.tag.Equals("Player")) {
+          g.GetComponent<PlayerMovement>().canMove = false;
+          Time.timeScale = 0;
+        }
     }
 
     void Update()

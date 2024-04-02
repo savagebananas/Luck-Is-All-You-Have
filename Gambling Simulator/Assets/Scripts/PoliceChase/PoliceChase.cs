@@ -2,37 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class PoliceChase : MonoBehaviour
 {
     public static GameObject policeCar;
     public static Sprite policeCarLeft;
     public static Sprite policeCarRight;
-    public static ObjectFinder finder;
-    public static GameObject player;
+    public ObjectFinder finder;
+    public GameObject player;
+    public Button button;
 
    
-    public static float mapLeftBound = -70;
-    public static float mapRightBound = 110;
-    public static float minDistance = 10;
-    public static float maxDistance = 20;
-    private static float leftY = -1.27f;
-    private static float rightY = -0.29f;
+    public float mapLeftBound = -70;
+    public float mapRightBound = 110;
+    public float minDistance = 10;
+    public float maxDistance = 20;
+    private float leftY = -1.27f;
+    private float rightY = -0.29f;
 
-     public static void StartChase() {
+     public void StartChase() {
         //ADD ANIMATION OR SIREN HERE
         SpawnPoliceCar(true);
         SpawnPoliceCar(false);
     }
     void Start()
     {
-       StartChase();
+        button.onClick.AddListener(() => StartChase());
     }
 
     void Update()
     {  
     }
-    public static GameObject SpawnPoliceCar(bool left) {
+    public GameObject SpawnPoliceCar(bool left) {
         if (finder == null) {
             finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
             policeCar = finder.policeCar;

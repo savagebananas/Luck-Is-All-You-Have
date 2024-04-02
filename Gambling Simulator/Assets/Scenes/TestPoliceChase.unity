@@ -2957,8 +2957,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.037199974, y: 0.09580001, z: 0}
-    m_Extent: {x: 2.2823, y: 0.79260004, z: 0}
+    m_Center: {x: -0.028400064, y: 0.09294999, z: 0}
+    m_Extent: {x: 2.2745, y: 0.79495, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3408,8 +3408,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.2051, y: -0.9294499, z: 0}
-    m_Extent: {x: 1.4791999, y: 1.66705, z: 0}
+    m_Center: {x: -0.19780004, y: -0.93305, z: 0}
+    m_Extent: {x: 1.485, y: 1.67595, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6302,8 +6302,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.52329993, y: 0.60105, z: 0}
-    m_Extent: {x: 2.573, y: 1.4111501, z: 0}
+    m_Center: {x: -0.52479994, y: 0.59430003, z: 0}
+    m_Extent: {x: 2.5656, y: 1.4084, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12436,8 +12436,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.28869998, y: 0.03614998, z: 0}
-    m_Extent: {x: 1.5316, y: 0.59915, z: 0}
+    m_Center: {x: 0.29895002, y: 0.036500007, z: 0}
+    m_Extent: {x: 1.52385, y: 0.6035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15580,6 +15580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2439c06a1ca524ca58e7a4889c467b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  mapLeftBound: -70
+  mapRightBound: 110
+  minDistance: 10
+  maxDistance: 20
 --- !u!1 &1800110808
 GameObject:
   m_ObjectHideFlags: 0
@@ -15730,8 +15735,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.67385, y: 0.04159999, z: 0}
-    m_Extent: {x: 1.14375, y: 0.596, z: 0}
+    m_Center: {x: 0.6774, y: 0.039200008, z: 0}
+    m_Extent: {x: 1.1496, y: 0.5963, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
