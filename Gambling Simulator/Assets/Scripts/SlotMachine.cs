@@ -18,8 +18,12 @@ public class SlotMachine : MonoBehaviour
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space) && !isSpinning) {
-            welcome.GetComponent<Animator>().SetTrigger("FadeOut");
-            StartCoroutine(SpinReels());
+            if (PlayerCash.getCash()>=spinCost) {
+                welcome.GetComponent<Animator>().SetTrigger("FadeOut");
+                StartCoroutine(SpinReels());
+            } else {
+                
+            }
         }
     }
 
