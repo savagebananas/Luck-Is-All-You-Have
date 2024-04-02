@@ -18,7 +18,7 @@ public class LightMoveScript : MonoBehaviour
         {
             movingRight = false;
         }
-        else if (transform.position.x < -13)
+        else if (transform.position.x < -18)
         {
             movingRight = true;
         }
