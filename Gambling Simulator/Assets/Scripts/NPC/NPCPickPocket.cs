@@ -24,9 +24,13 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     public static int richMin = 500;
     public static int richMax = 1500;
     public static float stealCoolDown = 200f;
-    public Boolean interactable = true;
+    public bool interactable = true;
     public float failChance = 25;
     private float timeLeft = 0;
+    public static GameObject player;
+    public ObjectFinder finder;
+    public AudioManager audioManager;
+
 
      public void OnInteract()
     {
@@ -34,11 +38,12 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
         if (UnityEngine.Random.Range(0, 100) > failChance) {
             pickPocket();
         } else {
-            //ADD POLICE STUFF HERE
+            player.GetComponent<PoliceChase>().StartChase();
         }
     }
     private void pickPocket() {
         //ADD UI STUFF HERE
+        audioManager.PlaySFX("CashWin");
         PlayerCash.addCash(cash);
         cash = 0;
         timeLeft = stealCoolDown;
@@ -51,6 +56,8 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
 
     public void OnInteractSelected()
     {
+        if (interactionLight != null) interactionLight.SetActive(true);
+
     }
      public void InteractSelectedLoop()
     {
@@ -60,6 +67,13 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     void Start()
     {
         randomizeCash();
+
+        if (finder == null) {
+            finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
+        }
+        player = finder.player;
+        audioManager = finder.audioManager;
+        
         
     }
 

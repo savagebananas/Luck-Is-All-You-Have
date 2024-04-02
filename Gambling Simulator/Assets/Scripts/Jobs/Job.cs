@@ -16,14 +16,19 @@ public class Job : MonoBehaviour, IInteractable
     public GameObject interactionLight;
     public int dailyWage;
     public float hoursPerDay;
-    public Boolean isCurrentJob;
-    public Boolean random;
+    public bool isCurrentJob;
+    public bool random;
     public int minIncome = 100;
     public int maxIncome = 2000;
+    private static GameObject player;
+    public ObjectFinder finder;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (player == null) {
+            if (finder == null) finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
+            player = finder.player;
+        }
     }
 
      void IInteractable.OnInteractSelected()
@@ -39,6 +44,8 @@ public class Job : MonoBehaviour, IInteractable
                 randomizeWage();
             }
             PlayerJob.setJob(this);
+        } else {
+            player.GetComponent<PlayerJob>().work();
         }
     }
    

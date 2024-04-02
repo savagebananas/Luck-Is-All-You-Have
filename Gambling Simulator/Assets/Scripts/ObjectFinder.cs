@@ -20,6 +20,11 @@ public class ObjectFinder : MonoBehaviour
     public Sprite policeCarLeft;
     public Sprite policeCarRight;
     public TextMeshProUGUI cashText;
+    public AudioManager audioManager;
+    public GameObject blackUIScreen;
+    public AnimationClip fadeOut;
+    public AnimationClip fadeIn;
+    public TimeSystem timeSys;
 
     void Start()
     {
