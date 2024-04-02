@@ -92,17 +92,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6876324646849128161}
-  - component: {fileID: 5769086666918438428}
-  - component: {fileID: 3644134864961600594}
-  - component: {fileID: 2301374458814569169}
-  - component: {fileID: 5937792145779987615}
-  - component: {fileID: 5126511991220609749}
-  - component: {fileID: 195436581597752690}
-  - component: {fileID: 7241788980546527296}
-  - component: {fileID: 5180025016425418701}
-  - component: {fileID: 6585513699979372948}
-  - component: {fileID: 8438503320939851209}
+  - component: {fileID: 2471455879997925031}
+  - component: {fileID: 9123212397886369291}
+  - component: {fileID: 862970508106209884}
+  - component: {fileID: 4901692080783357127}
+  - component: {fileID: 7875146220152576460}
+  - component: {fileID: 4067805335114268003}
+  - component: {fileID: 5910094103803217651}
+  - component: {fileID: 1981380222656968569}
+  - component: {fileID: 7240087113661694844}
+  - component: {fileID: 2997380283358983945}
+  - component: {fileID: 949124929659007330}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -326,32 +326,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6585513699979372948
+--- !u!114 &2997380283358983945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3256177857754012607}
+  m_GameObject: {fileID: 6371874535309591578}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2439c06a1ca524ca58e7a4889c467b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   finder: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 6371874535309591578}
   button: {fileID: 0}
   mapLeftBound: -70
   mapRightBound: 110
-  minDistance: 10
-  maxDistance: 20
---- !u!114 &8438503320939851209
+  minDistance: 20
+  maxDistance: 30
+--- !u!114 &949124929659007330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3256177857754012607}
+  m_GameObject: {fileID: 6371874535309591578}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f249ff5d8b3242f9a0ad7924418e1ea, type: 3}
@@ -359,6 +359,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackUIScreen: {fileID: 0}
   finder: {fileID: 0}
-  fadeOut: {fileID: 0}
-  fadeIn: {fileID: 0}
+  fadeOut: {fileID: 7400000, guid: e9c0ca62996d1e54db9ed76192fb46f4, type: 2}
+  fadeIn: {fileID: 7400000, guid: 0202e07d267d44e4fa32053908f37063, type: 2}
   timeSys: {fileID: 0}
