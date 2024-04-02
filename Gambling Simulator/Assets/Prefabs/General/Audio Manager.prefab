@@ -183,11 +183,19 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b571aa75b27017e4dadefc5a2642c134, type: 3}
   - name: City Music
     clip: {fileID: 8300000, guid: 0753dcc391694084e936f498893ac39a, type: 3}
+  - name: Cars Driving
+    clip: {fileID: 8300000, guid: f594229d8c25d574184d1e0130cab27e, type: 3}
   sfxSounds:
   - name: CashWin
     clip: {fileID: 8300000, guid: 7d7e9215c11bd514a897bc1563fc87d4, type: 3}
   - name: CashWinBig
     clip: {fileID: 8300000, guid: 99dfbc5421c756d4289b2a10c8cf8264, type: 3}
+  - name: Cars Revving
+    clip: {fileID: 8300000, guid: 31692296a1ce36348ae1015c2448fa4c, type: 3}
+  - name: Race Countdown
+    clip: {fileID: 8300000, guid: 213ac6715d633774da84788f2559c119, type: 3}
+  - name: Release Ball
+    clip: {fileID: 8300000, guid: 268f3dcce4e676b468f6b88868f300a8, type: 3}
   musicSource: {fileID: 205292297482700334}
   sfxSource: {fileID: 7030921442261656618}
 --- !u!1 &6527105304303650137
@@ -234,7 +242,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

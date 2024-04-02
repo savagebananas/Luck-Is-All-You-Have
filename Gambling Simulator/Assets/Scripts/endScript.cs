@@ -3,58 +3,115 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class endScript : MonoBehaviour
+public class EndScript : MonoBehaviour
 {
-    public TextMeshProUGUI over1;
-    public TextMeshProUGUI go;
-    public Rigidbody2D car1;
-    public Rigidbody2D car2;
+    public TextMeshProUGUI welcomeText;
+    public TextMeshProUGUI gameEndText;
+    public TextMeshProUGUI countdownText;
+
     public GameObject manual;
     public GameObject AI;
-    private bool raceEnded = false;
-    public int cash=PlayerCash.getCash()*2;
-    // Start is called before the first frame update
+    public bool raceEnded = false;
+    public int cash = PlayerCash.getCash() * 2;
+
+    public AudioManager audioManager;
+
     void Start()
     {
-        go.text = "Welcome to Drag Race! Start Spamming space when you see go!";
-        StartCoroutine(resetTimer());
+        StartCoroutine(WelcomeText());
+        StartCoroutine(Countdown());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (raceEnded)
+        {
+            if (manual.GetComponent<Rigidbody2D>().velocity.x > 0)
+            {
+                // Slow down
+                manual.GetComponent<Rigidbody2D>().velocity -= Vector2.right * 100 * Time.deltaTime;
+            }
+            else
+            {
+                manual.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
+            if (AI.GetComponent<Rigidbody2D>().velocity.x > 0)
+            {
+                // Slow down
+                AI.GetComponent<Rigidbody2D>().velocity -= Vector2.right * 100 * Time.deltaTime;
+            }
+            else
+            {
+                AI.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                AI.GetComponent<Animator>().SetTrigger("Stop");
+            }
+        }
     }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.layer == 3 && !raceEnded)
         {
-            over1.text = "Game over - you win";
-            go.text = "";
-            car1.velocity = Vector2.right * 0;
-            car2.velocity = Vector2.right * 0;
+            gameEndText.text = "WIN";
+            countdownText.text = "";
             raceEnded = true;
-            PlayerCash.addCash(cash);
-            Destroy(AI);
-            Destroy(manual);
+            StartCoroutine(GameWin());
+
+            
         }
         else if (col.gameObject.layer == 0 && !raceEnded)
         {
-            over1.text = "Game over - you lose!";
-            go.text = "";
-            car1.velocity = Vector2.right * 0;
-            car2.velocity = Vector2.right * 0;
+            gameEndText.text = "LOSE";
+            countdownText.text = "";
             raceEnded = true;
-            Destroy(AI);
-            Destroy(manual);
-            PlayerCash.addCash(-cash);
+            StartCoroutine(GameLose());
         }
 
     }
-    IEnumerator resetTimer() {
-        yield return new WaitForSeconds(3);
-        go.text = "go!";
+
+    IEnumerator WelcomeText()
+    {
+        welcomeText.text = "Welcome to Drag Race! Spam Space to Go Faster!";
+        yield return new WaitForSeconds(1.5f);
+        welcomeText.GetComponent<Animator>().SetTrigger("FadeOut");
 
     }
+
+    IEnumerator Countdown()
+    {
+
+        audioManager.PlaySFX("Cars Revving");
+        yield return new WaitForSeconds(1);
+        audioManager.PlaySFX("Race Countdown");
+        countdownText.text = "3";
+        yield return new WaitForSeconds(1);
+        countdownText.text = "2";
+        yield return new WaitForSeconds(1);
+        countdownText.text = "1";
+        yield return new WaitForSeconds(1);
+        countdownText.text = "GO";
+        yield return new WaitForSeconds(.5f);
+        audioManager.PlayMusic("Cars Driving");
+        countdownText.text = "";
+    }
+
+    public IEnumerator GameWin()
+    {
+        audioManager.StopMusic();
+        yield return new WaitForSeconds(3);
+        audioManager.PlaySFX("CashWin");
+        PlayerCash.addCash(cash);
+        yield return new WaitForSeconds(1);
+        GetComponent<MoveToScene>().GoToScene();
+    }
+
+    public IEnumerator GameLose()
+    {
+        audioManager.StopMusic();
+        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
+        GetComponent<MoveToScene>().GoToScene();
+    }
+
 
 }

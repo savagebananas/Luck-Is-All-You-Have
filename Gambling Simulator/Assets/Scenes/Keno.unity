@@ -2869,7 +2869,7 @@ MonoBehaviour:
   playerLosingLight: {fileID: 1463790997}
   opponentLosingLight: {fileID: 1539913421}
   tieGameLight: {fileID: 353390528}
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1439146612}
 --- !u!114 &1012070614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3973,6 +3973,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2144712331201009178, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
   m_PrefabInstance: {fileID: 1439146610}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1439146612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+  m_PrefabInstance: {fileID: 1439146610}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b2e9ec502c1354b83e78d0b4442b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454872811
 GameObject:
   m_ObjectHideFlags: 0

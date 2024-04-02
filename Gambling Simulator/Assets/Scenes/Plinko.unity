@@ -930,9 +930,9 @@ Transform:
   - {fileID: 1571401028}
   - {fileID: 61710026}
   - {fileID: 1419756118}
-  - {fileID: 1491478017}
   - {fileID: 8572329}
   - {fileID: 689083460}
+  - {fileID: 1491478017}
   - {fileID: 766781481}
   m_Father: {fileID: 1642062966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7725,7 +7725,7 @@ GameObject:
   - component: {fileID: 689083462}
   - component: {fileID: 689083461}
   m_Layer: 0
-  m_Name: Basket 0.2x (2)
+  m_Name: Exterior Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7803,7 +7803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c1c6cc6bfb67d49aea28b83995e339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0.2
+  multiplier: 0
 --- !u!212 &689083463
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8510,6 +8510,7 @@ MonoBehaviour:
   ballPrefab: {fileID: 325341615614028252, guid: 4703df68702c6414aa129d3fa5edcfc0, type: 3}
   spawnDeviation: 0.55
   welcomeTextUI: {fileID: 0}
+  audioManager: {fileID: 8066699392346139522}
 --- !u!4 &913559678
 Transform:
   m_ObjectHideFlags: 0
@@ -10300,7 +10301,7 @@ GameObject:
   - component: {fileID: 1491478015}
   - component: {fileID: 1491478018}
   m_Layer: 0
-  m_Name: Exterior Basket
+  m_Name: Basket 0.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10318,7 +10319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c1c6cc6bfb67d49aea28b83995e339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0
+  multiplier: 0.2
 --- !u!212 &1491478016
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12926,6 +12927,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 72089666}
     m_Modifications:
+    - target: {fileID: 205292297482700334, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2144712331201009178, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12970,11 +12975,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+      propertyPath: musicSounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: bb5cd462198939e499b742b8f0b1f047, type: 3}
+    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+      propertyPath: musicSounds.Array.data[5].name
+      value: Plinko
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+--- !u!114 &8066699392346139522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+  m_PrefabInstance: {fileID: 8066699392346139521}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b2e9ec502c1354b83e78d0b4442b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
