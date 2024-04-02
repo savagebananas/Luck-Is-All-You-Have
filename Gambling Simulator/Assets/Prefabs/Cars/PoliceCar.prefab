@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512271690846112857}
   - component: {fileID: 8246764941825493674}
-  - component: {fileID: 3406710134406376612}
+  - component: {fileID: 1449916573888956195}
   m_Layer: 0
   m_Name: PoliceCar
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3406710134406376612
+--- !u!114 &1449916573888956195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6225284548689420672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81bdcfc9d42304a5887204049eeea6a0, type: 3}
+  m_Script: {fileID: 11500000, guid: d45458e193f124d5eb2e8dc166c77f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
