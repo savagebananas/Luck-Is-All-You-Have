@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.51915, y: 0.605, z: 0}
-    m_Extent: {x: 2.56555, y: 1.408, z: 0}
+    m_Center: {x: -0.52405, y: 0.59940004, z: 0}
+    m_Extent: {x: 2.57645, y: 1.4112, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -833,8 +833,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.67615, y: 0.035650015, z: 0}
-    m_Extent: {x: 1.1415501, y: 0.59475, z: 0}
+    m_Center: {x: 0.67515004, y: 0.04190001, z: 0}
+    m_Extent: {x: 1.14325, y: 0.5961, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5254,8 +5254,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29305, y: 0.042600006, z: 0}
-    m_Extent: {x: 1.52685, y: 0.60099995, z: 0}
+    m_Center: {x: 0.28934997, y: 0.040850013, z: 0}
+    m_Extent: {x: 1.52385, y: 0.60035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11775,8 +11775,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.03279996, y: 0.09095001, z: 0}
-    m_Extent: {x: 2.2814, y: 0.79775, z: 0}
+    m_Center: {x: -0.033749938, y: 0.08770001, z: 0}
+    m_Extent: {x: 2.27955, y: 0.7896, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13928,6 +13928,18 @@ PrefabInstance:
     - target: {fileID: 7030921442261656618, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
       propertyPath: m_Volume
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+      propertyPath: sfxSounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b89151876fe3d147989c84c6b4b45f5, type: 3}
+    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+      propertyPath: sfxSounds.Array.data[7].name
+      value: Police Siren
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26491,8 +26503,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.20094997, y: -0.93459994, z: 0}
-    m_Extent: {x: 1.48065, y: 1.6754, z: 0}
+    m_Center: {x: -0.20365, y: -0.92854995, z: 0}
+    m_Extent: {x: 1.48835, y: 1.6779499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
