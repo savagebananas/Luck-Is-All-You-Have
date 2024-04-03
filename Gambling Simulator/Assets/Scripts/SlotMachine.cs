@@ -48,7 +48,6 @@ public class SlotMachine : MonoBehaviour
             {
                 StartCoroutine(SpinReel(slotReels[i], randomTile, true));
                 yield return new WaitForSeconds(.3f); // Stagger the start of each reel spin
-                audioManager.PlaySFX("Slot Reels Stopping");
             }
         }
         // Normal Event
@@ -59,7 +58,6 @@ public class SlotMachine : MonoBehaviour
 
                 StartCoroutine(SpinReel(slotReels[i], randomTile, false));
                 yield return new WaitForSeconds(.3f); // Stagger the start of each reel spin
-                audioManager.PlaySFX("Slot Reels Stopping");
             }
         }
 
@@ -72,6 +70,9 @@ public class SlotMachine : MonoBehaviour
 
     private IEnumerator SpinReel(Image reel, int randomTile, bool winEvent)
     {
+        audioManager.PlaySFX("SlotSpin");
+
+
         float endTime = Time.time + spinDuration;
         
         while (Time.time < endTime)
@@ -86,7 +87,9 @@ public class SlotMachine : MonoBehaviour
             Debug.Log("Win Event Slot: " + randomTile);
             reel.sprite = slotSymbols[randomTile];
         }
-        
+
+        audioManager.PlaySFX("Slot Reels Stopping");
+
     }
 
     private void CheckWinCondition()

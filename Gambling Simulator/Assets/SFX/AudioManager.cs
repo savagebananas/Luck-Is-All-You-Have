@@ -27,14 +27,22 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            PlayMusic("Intro Music");
+        }
         if (SceneManager.GetActiveScene().name == "City")
         {
             PlayMusic("City Music");
         }
         if (SceneManager.GetActiveScene().name == "Casino Interior")
         {
-            PlayMusic("Jazz1");
             PlayMusic("CasinoAmbience");
+        }
+
+        if (SceneManager.GetActiveScene().name == "SlotMachinePlay")
+        {
+            PlayMusic("Jazz");
         }
 
         if (SceneManager.GetActiveScene().name == "Plinko")
@@ -62,6 +70,9 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
 
+        sfxSource.volume = 0.75f;
+
+
         if (s == null)
         {
             Debug.Log("SFX Not Found");
@@ -73,6 +84,12 @@ public class AudioManager : MonoBehaviour
             if (name == "Race Countdown") sfxSource.time = 0.1f;
             if (name == "Cars Revving") sfxSource.time = 3;
             if (name == "Cars Driving") sfxSource.time = 0;
+            if (name == "SlotSpin")
+            {
+                sfxSource.time = 3f;
+                sfxSource.volume = 0.4f;
+            }
+
 
             sfxSource.PlayOneShot(s.clip);
         }

@@ -22,24 +22,27 @@ public class PoliceChase : MonoBehaviour
 
      public void StartChase() {
         //ADD ANIMATION OR SIREN HERE
+        finder.audioManager.PlaySFX("Police Siren");
         SpawnPoliceCar(true);
         SpawnPoliceCar(false);
     }
     void Start()
     {
         button.onClick.AddListener(() => StartChase());
+        finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
+
     }
 
     void Update()
     {  
     }
     public GameObject SpawnPoliceCar(bool left) {
-        if (finder == null) {
-            finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
-            player = finder.player;
-            policeCarLeft = finder.policeCarLeft;
-            policeCarRight = finder.policeCarRight;
-        }
+        
+
+        player = finder.player;
+        policeCarLeft = finder.policeCarLeft;
+        policeCarRight = finder.policeCarRight;
+
          // Instantiate car
         GameObject car;
         Vector3 pos = player.transform.position;

@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.52405, y: 0.59940004, z: 0}
-    m_Extent: {x: 2.57645, y: 1.4112, z: 0}
+    m_Center: {x: -0.521, y: 0.60344994, z: 0}
+    m_Extent: {x: 2.5692, y: 1.40125, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -833,8 +833,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.67515004, y: 0.04190001, z: 0}
-    m_Extent: {x: 1.14325, y: 0.5961, z: 0}
+    m_Center: {x: 0.6769, y: 0.041799992, z: 0}
+    m_Extent: {x: 1.1359, y: 0.60150003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5254,8 +5254,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.28934997, y: 0.040850013, z: 0}
-    m_Extent: {x: 1.52385, y: 0.60035, z: 0}
+    m_Center: {x: 0.2884, y: 0.045049995, z: 0}
+    m_Extent: {x: 1.5302999, y: 0.59385, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11775,8 +11775,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.033749938, y: 0.08770001, z: 0}
-    m_Extent: {x: 2.27955, y: 0.7896, z: 0}
+    m_Center: {x: -0.03304994, y: 0.09334999, z: 0}
+    m_Extent: {x: 2.27065, y: 0.79405, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -13920,26 +13920,6 @@ PrefabInstance:
     - target: {fileID: 6145086387477115994, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
       propertyPath: m_Name
       value: Audio Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6145086387477115994, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030921442261656618, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
-      propertyPath: m_Volume
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
-      propertyPath: sfxSounds.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
-      propertyPath: sfxSounds.Array.data[7].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9b89151876fe3d147989c84c6b4b45f5, type: 3}
-    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
-      propertyPath: sfxSounds.Array.data[7].name
-      value: Police Siren
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26503,8 +26483,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.20365, y: -0.92854995, z: 0}
-    m_Extent: {x: 1.48835, y: 1.6779499, z: 0}
+    m_Center: {x: -0.19775003, y: -0.9338, z: 0}
+    m_Extent: {x: 1.48575, y: 1.6756, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
