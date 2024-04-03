@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SetPreviousScenePlayerPosition : MonoBehaviour
 {
     public GameObject player;
-    public static float lastCityPos;
+    public static float lastCityPos = 97.5227f;
     public static float lastCasinoPos = -18.25f;
 
     void Start()

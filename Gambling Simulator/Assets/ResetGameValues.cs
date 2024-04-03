@@ -19,6 +19,8 @@ public class ResetGameValues : MonoBehaviour
         timeSystem.gameEnded = false;
 
         PlayerCash.setCash(10000);
+
+        SetPreviousScenePlayerPosition.lastCityPos = 97.5227f;
     }
 
 }
