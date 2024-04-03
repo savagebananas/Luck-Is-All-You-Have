@@ -62,9 +62,9 @@ namespace Player_Scripts
             if (nearbyInteractables.Count > 0)
             {
                 GameObject closestInteractable = nearbyInteractables[0];
-                float closestDist = 0;
+                float closestDist = DistanceToPlayer(closestInteractable);
 
-                for (int i = 0; i < nearbyInteractables.Count; i++)
+                for (int i = 1; i < nearbyInteractables.Count; i++)
                 {
                     if (DistanceToPlayer(nearbyInteractables[i]) < closestDist)
                     {
