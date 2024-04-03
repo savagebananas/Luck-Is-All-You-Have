@@ -105,6 +105,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
         }
         player = finder.player;
         audioManager = finder.audioManager;
+        stealText = finder.stealText;
         stealText.gameObject.SetActive(false);
         
         
