@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class TimeSystem : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class TimeSystem : MonoBehaviour
     private float timeElapsed;
     public static float time;
     private float timePercentage;
-    private static float startTime;
+    public static float startTime;
     public UnityEvent newDay;
 
     // Color and Light
@@ -85,10 +86,18 @@ public class TimeSystem : MonoBehaviour
 
         timeToText((int) time, minutes);
 
-        
+        if (daysLeft <= 0 && SceneManager.GetActiveScene().name != "Main Menu")
+        {
+            GetComponent<OutOfTime>().End();
+        }
 
     }
 
+    public void Reset()
+    {
+        startTime = Time.time;
+        daysLeft = 9;
+    }
     void timeToText(int time, int d)
     {
         if (time < 10)

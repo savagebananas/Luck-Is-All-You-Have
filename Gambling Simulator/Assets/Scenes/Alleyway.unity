@@ -2646,6 +2646,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   daysLeft: 9
   secondsPerGameDay: 360
+  newDay:
+    m_PersistentCalls:
+      m_Calls: []
   gradient:
     serializedVersion: 2
     key0: {r: 0.17254902, g: 0.18431373, b: 0.40784314, a: 1}
@@ -3322,6 +3325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateMachine: {fileID: 1739924889}
   animator: {fileID: 1935775397}
+  pickPocket: {fileID: 0}
 --- !u!1 &1448929118
 GameObject:
   m_ObjectHideFlags: 0
