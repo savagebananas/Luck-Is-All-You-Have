@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.5224999, y: 0.59655, z: 0}
-    m_Extent: {x: 2.5756001, y: 1.40625, z: 0}
+    m_Center: {x: -0.52700007, y: 0.60350007, z: 0}
+    m_Extent: {x: 2.5707002, y: 1.4108, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -795,8 +795,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.6826, y: 0.03605002, z: 0}
-    m_Extent: {x: 1.1437, y: 0.59735, z: 0}
+    m_Center: {x: 0.68075, y: 0.04340002, z: 0}
+    m_Extent: {x: 1.14485, y: 0.59749997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4707,8 +4707,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29119998, y: 0.041649997, z: 0}
-    m_Extent: {x: 1.5283, y: 0.59625, z: 0}
+    m_Center: {x: 0.29265004, y: 0.042400002, z: 0}
+    m_Extent: {x: 1.53385, y: 0.5996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11091,8 +11091,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.03340006, y: 0.08825001, z: 0}
-    m_Extent: {x: 2.28, y: 0.79215, z: 0}
+    m_Center: {x: -0.030550003, y: 0.09130001, z: 0}
+    m_Extent: {x: 2.28255, y: 0.7923, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15583,6 +15583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115835140}
+  - component: {fileID: 1115835141}
   m_Layer: 0
   m_Name: Setup
   m_TagString: Untagged
@@ -15610,6 +15611,19 @@ Transform:
   - {fileID: 874934678}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115835141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115835139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5146e41e1b9b75647a94885738e94afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeSystem: {fileID: 0}
 --- !u!1 &1118468599
 GameObject:
   m_ObjectHideFlags: 0
@@ -23993,8 +24007,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.20414996, y: -0.9259, z: 0}
-    m_Extent: {x: 1.47525, y: 1.6673, z: 0}
+    m_Center: {x: -0.21245003, y: -0.9254, z: 0}
+    m_Extent: {x: 1.48245, y: 1.6715, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25123,6 +25137,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2029197471}
         m_TargetAssemblyTypeName: MoveToScene, Assembly-CSharp
         m_MethodName: GoToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1115835141}
+        m_TargetAssemblyTypeName: DeleteTimeManager, Assembly-CSharp
+        m_MethodName: DELETE
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

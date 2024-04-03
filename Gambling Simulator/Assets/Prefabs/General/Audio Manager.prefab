@@ -187,6 +187,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f594229d8c25d574184d1e0130cab27e, type: 3}
   - name: Jazz
     clip: {fileID: 8300000, guid: 35141d947c031a149a0e01b4cd0855f8, type: 3}
+  - name: Alleyway
+    clip: {fileID: 8300000, guid: 6dafcea48b6c0894e850e435db1afbe7, type: 3}
   sfxSounds:
   - name: CashWin
     clip: {fileID: 8300000, guid: 7d7e9215c11bd514a897bc1563fc87d4, type: 3}
@@ -207,11 +209,7 @@ MonoBehaviour:
   - name: Slot Reels Stopping
     clip: {fileID: 8300000, guid: f9c8f64e8eacd40ce8e8b163783e5231, type: 3}
   - name: SlotSpin
-    clip: {fileID: 8300000, guid: c7e0b26c9cd4106479d60103588da694, type: 3}
-  - name: Police Siren
-    clip: {fileID: 8300000, guid: 9b89151876fe3d147989c84c6b4b45f5, type: 3}
-  - name: Police Siren
-    clip: {fileID: 8300000, guid: 9b89151876fe3d147989c84c6b4b45f5, type: 3}
+    clip: {fileID: 8300000, guid: b964bb19406eba642ba4bc5cb71513e4, type: 3}
   musicSource: {fileID: 205292297482700334}
   sfxSource: {fileID: 7030921442261656618}
 --- !u!1 &6527105304303650137

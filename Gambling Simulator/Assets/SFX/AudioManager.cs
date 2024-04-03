@@ -49,6 +49,11 @@ public class AudioManager : MonoBehaviour
         {
             PlayMusic("Plinko");
         }
+
+        if (SceneManager.GetActiveScene().name == "Alleyway")
+        {
+            PlayMusic("Alleyway");
+        }
     }
 
     public void PlayMusic(string name) 
@@ -84,11 +89,6 @@ public class AudioManager : MonoBehaviour
             if (name == "Race Countdown") sfxSource.time = 0.1f;
             if (name == "Cars Revving") sfxSource.time = 3;
             if (name == "Cars Driving") sfxSource.time = 0;
-            if (name == "SlotSpin")
-            {
-                sfxSource.time = 3f;
-                sfxSource.volume = 0.4f;
-            }
 
 
             sfxSource.PlayOneShot(s.clip);
