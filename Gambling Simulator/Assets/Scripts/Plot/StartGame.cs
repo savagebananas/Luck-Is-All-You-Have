@@ -12,15 +12,11 @@ public class StartGame : MonoBehaviour
     public GameObject player;
     public ObjectFinder finder;
     private bool display = false;
-    private TextMeshProUGUI stealText;
-    private String stealTxt; 
-    private String letterTxt = "[Press E to Exit]";
+    
     void Start()
     {
         if (startOfGame) {
             finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
-            stealText = finder.stealText;
-            stealTxt = stealText.text;
             letterAnimator = finder.letterAnimator;
             player = finder.player;
             enterLetter();
@@ -32,16 +28,12 @@ public class StartGame : MonoBehaviour
         player.GetComponent<PlayerMovement>().canMove = false;
         letterAnimator.SetTrigger("LetterEnter");
         display = true;
-        stealText.text = letterTxt;
-        stealText.gameObject.SetActive(true);
     }
     private void exitLetter() {
         letterAnimator.SetTrigger("LetterExit");
         Time.timeScale = 1;
         player.GetComponent<PlayerMovement>().canMove = true;
-        stealText.text = stealTxt;
-        stealText.gameObject.SetActive(false);
-
+        
 
     }
 

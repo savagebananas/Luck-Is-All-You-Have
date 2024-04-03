@@ -27,6 +27,7 @@ public class ObjectFinder : MonoBehaviour
     public Animator letterAnimator;
     public TextMeshProUGUI stealText;
 
+
     void Start()
     {
         
