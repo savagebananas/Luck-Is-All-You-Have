@@ -25,14 +25,12 @@ public class StartGame : MonoBehaviour
         }
     }
     private void enterLetter() {
-        player.GetComponent<PlayerMovement>().canMove = false;
         letterAnimator.SetTrigger("LetterEnter");
         display = true;
     }
     private void exitLetter() {
         letterAnimator.SetTrigger("LetterExit");
         Time.timeScale = 1;
-        player.GetComponent<PlayerMovement>().canMove = true;
         
 
     }
