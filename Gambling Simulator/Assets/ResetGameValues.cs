@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeleteTimeManager : MonoBehaviour
+public class ResetGameValues : MonoBehaviour
 {
 
     public TimeSystem timeSystem;
@@ -12,11 +12,13 @@ public class DeleteTimeManager : MonoBehaviour
 
     }
 
-    public void DELETE()
+    public void ResetValues()
     {
         timeSystem = GameObject.Find("Time Manager").GetComponent<TimeSystem>();
         timeSystem.Reset();
         timeSystem.gameEnded = false;
+
+        PlayerCash.setCash(10000);
     }
 
 }

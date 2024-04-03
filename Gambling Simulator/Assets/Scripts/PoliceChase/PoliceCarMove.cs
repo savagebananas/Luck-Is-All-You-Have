@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Player_Scripts;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D;
 
@@ -11,6 +12,8 @@ public class PoliceCarMove : MonoBehaviour
     public float rightBound = 110;
     public bool goingLeft;
 
+    private bool canMove = true;
+
     private void Start()
     {
        
@@ -20,6 +23,7 @@ public class PoliceCarMove : MonoBehaviour
         GameObject g = otherCollider.gameObject;
         if (g.tag.Equals("Player")) {
             g.GetComponent<PlayerMovement>().canMove = false;
+            canMove = false;
             StartCoroutine(GameEnd());
         }
     }
@@ -34,7 +38,7 @@ public class PoliceCarMove : MonoBehaviour
 
     void Update()
     {
-        if (!goingLeft) // going right
+        if (!goingLeft && canMove) // going right
         {
             transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
             if (transform.position.x > rightBound)
@@ -42,7 +46,7 @@ public class PoliceCarMove : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else // going left
+        else if (goingLeft && canMove) // going left
         {
             transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
             if (transform.position.x < leftBound)
