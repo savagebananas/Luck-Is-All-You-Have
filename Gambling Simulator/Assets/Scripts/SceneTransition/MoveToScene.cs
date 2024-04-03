@@ -9,6 +9,11 @@ public class MoveToScene : MonoBehaviour
     public GameObject blackUIScreen;
     public AnimationClip fadeToBlackClip;
 
+    private void Start()
+    {
+
+    }
+
     public void GoToScene()
     {
         StartCoroutine(SwitchScene(sceneName));
