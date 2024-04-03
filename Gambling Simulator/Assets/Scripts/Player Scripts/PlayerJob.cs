@@ -9,7 +9,7 @@ public class PlayerJob : MonoBehaviour
     public static string jobTitle;
     private static int moneyGained;
     private static float hours;
-    private bool canWork = true;
+    public static bool canWork = true;
 
     private static bool isActive;
     public static Job currentJob;
@@ -31,7 +31,7 @@ public class PlayerJob : MonoBehaviour
         fadeOut = finder.fadeOut;
         fadeIn = finder.fadeIn;
         timeSys = finder.timeSys;
-        //timeSys.newDay.AddListener(() => StartCoroutine(WorkShift()));
+        timeSys.newDay.AddListener(() => canWork = true);
         
         
         
@@ -58,7 +58,7 @@ public class PlayerJob : MonoBehaviour
             if (finder==null)finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
             blackUIScreen = finder.blackUIScreen;
         }
-
+        canWork = false;
         StartCoroutine(WorkShift());   
     }
     private IEnumerator WorkShift() {

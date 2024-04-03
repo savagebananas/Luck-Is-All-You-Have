@@ -18,13 +18,16 @@ namespace NPC
             {
                 sentences = new string[3] { "Hey I am looking for employees for the cafe", "It is a 12-hour shift and you get 3000 dollars", "You In?" };
                 firstInteraction = false;
+                StartCoroutine(_runInteraction());
+
             }
-            else
+            else if (PlayerJob.canWork)
             {
                 sentences = new string[1] { "Welcome back, are you here to work?" };
+                StartCoroutine(_runInteraction());
+
             }
 
-            StartCoroutine(_runInteraction());
         }
 
         public override void OnFinishNPCInteraction()
