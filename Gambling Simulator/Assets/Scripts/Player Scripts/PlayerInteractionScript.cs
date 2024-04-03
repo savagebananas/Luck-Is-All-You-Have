@@ -118,7 +118,7 @@ namespace Player_Scripts
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawRay(transform.position, _currentGameObjectInteratcable.transform.position);
+            if (_currentGameObjectInteratcable != null) Gizmos.DrawRay(transform.position, _currentGameObjectInteratcable.transform.position - transform.position);
         }
     }
 }
