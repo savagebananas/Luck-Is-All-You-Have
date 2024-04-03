@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.5222, y: 0.60035, z: 0}
-    m_Extent: {x: 2.5777001, y: 1.4095501, z: 0}
+    m_Center: {x: -0.51680005, y: 0.5963, z: 0}
+    m_Extent: {x: 2.5658998, y: 1.4134, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -701,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &63132157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,8 +935,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.67495, y: 0.03760001, z: 0}
-    m_Extent: {x: 1.15145, y: 0.60440004, z: 0}
+    m_Center: {x: 0.6801, y: 0.03614998, z: 0}
+    m_Extent: {x: 1.1397, y: 0.60025, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5158,7 +5158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &504101526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5384,8 +5384,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29165, y: 0.039949983, z: 0}
-    m_Extent: {x: 1.53335, y: 0.59605, z: 0}
+    m_Center: {x: 0.29394996, y: 0.04065001, z: 0}
+    m_Extent: {x: 1.53065, y: 0.60415, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11907,8 +11907,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.030149937, y: 0.09125, z: 0}
-    m_Extent: {x: 2.27865, y: 0.79105, z: 0}
+    m_Center: {x: -0.031700015, y: 0.0925, z: 0}
+    m_Extent: {x: 2.2746, y: 0.78330004, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16681,6 +16681,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1054705963 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3183287656133011931, guid: 85e452b2a9e69b14a834b3fddb5d8938, type: 3}
+  m_PrefabInstance: {fileID: 1610726036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1058572842
 GameObject:
   m_ObjectHideFlags: 0
@@ -21457,6 +21462,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3320130977744251344, guid: 85e452b2a9e69b14a834b3fddb5d8938, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 1973984192}
+    - target: {fileID: 3320130977744251344, guid: 85e452b2a9e69b14a834b3fddb5d8938, type: 3}
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 864687806}
@@ -21466,7 +21475,10 @@ PrefabInstance:
       objectReference: {fileID: 50032227}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3183287656133011931, guid: 85e452b2a9e69b14a834b3fddb5d8938, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1973984193}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e452b2a9e69b14a834b3fddb5d8938, type: 3}
 --- !u!1 &1613850127
@@ -26509,8 +26521,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.2101, y: -0.92904997, z: 0}
-    m_Extent: {x: 1.4807999, y: 1.6837499, z: 0}
+    m_Center: {x: -0.20504999, y: -0.92655, z: 0}
+    m_Extent: {x: 1.48455, y: 1.67085, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -27415,6 +27427,88 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1973984192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1973984193}
+  - component: {fileID: 1973984194}
+  m_Layer: 0
+  m_Name: Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1973984193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973984192}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1054705963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1973984194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973984192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 0000000089611fc5bb06ee5365a3ffe5030ea82b8b2ed678
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 3.53
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &1975463561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6288181958003401408, guid: 2235332e46dd52c429ef8b9409509740, type: 3}

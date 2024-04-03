@@ -6,6 +6,7 @@ using UnityEngine;
 public class Hospital : MonoBehaviour, IInteractable
 {
     public GameObject winScreen;
+    public GameObject light;
 
     public void InteractSelectedLoop()
     {
@@ -30,12 +31,12 @@ public class Hospital : MonoBehaviour, IInteractable
 
     public void OnInteractionDeselected()
     {
-        //throw new System.NotImplementedException();
+        light.SetActive(false);
     }
 
     public void OnInteractSelected()
     {
-        //throw new System.NotImplementedException();
+        light.SetActive(true);
     }
 
     
