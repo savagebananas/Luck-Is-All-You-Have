@@ -1511,6 +1511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837709717}
   - component: {fileID: 837709718}
+  - component: {fileID: 837709719}
   m_Layer: 0
   m_Name: Drug Store Worker
   m_TagString: Untagged
@@ -1585,6 +1586,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &837709719
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837709716}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 66c37602719d7224b8f8fba10dc22161, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &842159089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,6 +2121,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   daysLeft: 9
   secondsPerGameDay: 360
+  timeElapsed: 0
+  newDay:
+    m_PersistentCalls:
+      m_Calls: []
   gradient:
     serializedVersion: 2
     key0: {r: 0.17254902, g: 0.18431373, b: 0.40784314, a: 1}
@@ -2132,6 +2158,7 @@ MonoBehaviour:
   globalLight: {fileID: 735549342}
   daysLeftText: {fileID: 0}
   timeText: {fileID: 0}
+  gameEnded: 0
 --- !u!1 &1012751577
 GameObject:
   m_ObjectHideFlags: 0
