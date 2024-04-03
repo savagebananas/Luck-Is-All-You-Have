@@ -24,6 +24,8 @@ public class ObjectFinder : MonoBehaviour
     public AnimationClip fadeOut;
     public AnimationClip fadeIn;
     public TimeSystem timeSys;
+    public Animator letterAnimator;
+    public TextMeshProUGUI stealText;
 
     void Start()
     {
