@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.52700007, y: 0.60350007, z: 0}
-    m_Extent: {x: 2.5707002, y: 1.4108, z: 0}
+    m_Center: {x: -0.5203999, y: 0.59435, z: 0}
+    m_Extent: {x: 2.5682, y: 1.40485, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -795,8 +795,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.68075, y: 0.04340002, z: 0}
-    m_Extent: {x: 1.14485, y: 0.59749997, z: 0}
+    m_Center: {x: 0.6768, y: 0.043149978, z: 0}
+    m_Extent: {x: 1.1436, y: 0.60214996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4707,8 +4707,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29265004, y: 0.042400002, z: 0}
-    m_Extent: {x: 1.53385, y: 0.5996, z: 0}
+    m_Center: {x: 0.29235, y: 0.0388, z: 0}
+    m_Extent: {x: 1.5311501, y: 0.5988, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11091,8 +11091,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.030550003, y: 0.09130001, z: 0}
-    m_Extent: {x: 2.28255, y: 0.7923, z: 0}
+    m_Center: {x: -0.037549973, y: 0.08625001, z: 0}
+    m_Extent: {x: 2.27845, y: 0.79395, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -24007,8 +24007,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.21245003, y: -0.9254, z: 0}
-    m_Extent: {x: 1.48245, y: 1.6715, z: 0}
+    m_Center: {x: -0.20670003, y: -0.92925006, z: 0}
+    m_Extent: {x: 1.4858999, y: 1.6812501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
