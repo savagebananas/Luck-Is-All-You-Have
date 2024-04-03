@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 144571610684947927}
   - component: {fileID: 8764632142867939635}
   - component: {fileID: 4101312006434295429}
-  - component: {fileID: 5280391749362813038}
+  - component: {fileID: -2771248409994351357}
   m_Layer: 0
   m_Name: PoliceCarLeft
   m_TagString: Untagged
@@ -160,7 +160,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5280391749362813038
+--- !u!114 &-2771248409994351357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,6 +169,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 581997227964486465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bd94a25e50746b468a56f29da3271f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5336da01057c5bc4d91a261f80bb5721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Main Menu
+  blackUIScreen: {fileID: 0}
+  fadeToBlackClip: {fileID: 0}

@@ -19,10 +19,17 @@ public class PoliceCarMove : MonoBehaviour
     void OnTriggerEnter2D(Collider2D otherCollider) {
         GameObject g = otherCollider.gameObject;
         if (g.tag.Equals("Player")) {
-          g.GetComponent<PlayerMovement>().canMove = false;
-            GetComponent<Busted>().End();
-          Time.timeScale = 0.2f;
+            g.GetComponent<PlayerMovement>().canMove = false;
+            StartCoroutine(GameEnd());
         }
+    }
+
+    IEnumerator GameEnd()
+    {
+        var bustedScreen = GameObject.Find("GameEndCanvas").transform.GetChild(1).gameObject;
+        bustedScreen.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        GameObject.Find("Canvas").GetComponent<MoveToScene>().GoToScene();
     }
 
     void Update()
