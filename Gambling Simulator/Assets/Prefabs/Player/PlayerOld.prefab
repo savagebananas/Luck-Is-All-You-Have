@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1c3b6156044fb0b0766d45e449f4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nearbyInteractables: []
   _currentGameObjectInteratcable: {fileID: 0}
   canInteract: 0
 --- !u!114 &7241788980546527296

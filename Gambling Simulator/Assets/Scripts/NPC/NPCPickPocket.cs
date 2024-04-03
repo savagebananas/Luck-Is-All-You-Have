@@ -47,8 +47,10 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
         if (UnityEngine.Random.Range(0, 100) > failChance) {
             pickPocket();
             interactable = false;
+            OnInteractionDeselected();
         } else {
             CallPolice();
+            OnInteractionDeselected();
         }
     }
     private void pickPocket() {
