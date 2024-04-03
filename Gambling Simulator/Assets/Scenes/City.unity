@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.5209501, y: 0.597, z: 0}
-    m_Extent: {x: 2.56335, y: 1.3984, z: 0}
+    m_Center: {x: -0.53205, y: 0.59790003, z: 0}
+    m_Extent: {x: 2.56925, y: 1.4003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -935,8 +935,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.67755, y: 0.033149987, z: 0}
-    m_Extent: {x: 1.1452501, y: 0.59465003, z: 0}
+    m_Center: {x: 0.67175, y: 0.03885001, z: 0}
+    m_Extent: {x: 1.14785, y: 0.59995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5384,8 +5384,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.2931, y: 0.0404, z: 0}
-    m_Extent: {x: 1.5312, y: 0.6028, z: 0}
+    m_Center: {x: 0.28830004, y: 0.03909999, z: 0}
+    m_Extent: {x: 1.5303, y: 0.6067, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11907,8 +11907,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.03034997, y: 0.09015, z: 0}
-    m_Extent: {x: 2.28155, y: 0.79065, z: 0}
+    m_Center: {x: -0.029600024, y: 0.08675, z: 0}
+    m_Extent: {x: 2.2792, y: 0.79655004, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26509,8 +26509,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.20740002, y: -0.9233, z: 0}
-    m_Extent: {x: 1.4846001, y: 1.6772001, z: 0}
+    m_Center: {x: -0.20609999, y: -0.9240999, z: 0}
+    m_Extent: {x: 1.4814, y: 1.6703, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -29709,10 +29709,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 63132160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.75, y: -487}
-  m_SizeDelta: {x: 500, y: 436.9011}
+  m_AnchorMin: {x: 0.22137505, y: 0}
+  m_AnchorMax: {x: 0.69100004, y: 1}
+  m_AnchoredPosition: {x: 70.25, y: -487}
+  m_SizeDelta: {x: 109, y: -31.098907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5590684055979522437
 MonoBehaviour:
