@@ -16,6 +16,7 @@ public class DeleteTimeManager : MonoBehaviour
     {
         timeSystem = GameObject.Find("Time Manager").GetComponent<TimeSystem>();
         timeSystem.Reset();
+        timeSystem.gameEnded = false;
     }
 
 }

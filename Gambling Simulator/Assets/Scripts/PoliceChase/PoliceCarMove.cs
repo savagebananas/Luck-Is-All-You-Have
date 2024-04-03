@@ -20,7 +20,8 @@ public class PoliceCarMove : MonoBehaviour
         GameObject g = otherCollider.gameObject;
         if (g.tag.Equals("Player")) {
           g.GetComponent<PlayerMovement>().canMove = false;
-          Time.timeScale = 0;
+            GetComponent<Busted>().End();
+          Time.timeScale = 0.2f;
         }
     }
 

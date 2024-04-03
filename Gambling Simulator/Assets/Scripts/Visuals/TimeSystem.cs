@@ -15,7 +15,7 @@ public class TimeSystem : MonoBehaviour
 
     [Header("Time values")]
     public float secondsPerGameDay;
-    private float timeElapsed;
+    public float timeElapsed;
     public static float time;
     private float timePercentage;
     public static float startTime;
@@ -30,6 +30,8 @@ public class TimeSystem : MonoBehaviour
     public TextMeshProUGUI timeText;
 
     public static TimeSystem instance;
+
+    public bool gameEnded = false;
 
     private void Start()
     {
@@ -86,9 +88,10 @@ public class TimeSystem : MonoBehaviour
 
         timeToText((int) time, minutes);
 
-        if (daysLeft <= 0 && SceneManager.GetActiveScene().name != "Main Menu")
+        if (daysLeft <= 0 && !SceneManager.GetActiveScene().name.Equals("Main Menu") && gameEnded == false)
         {
             GetComponent<OutOfTime>().End();
+            gameEnded = true;
         }
 
     }
