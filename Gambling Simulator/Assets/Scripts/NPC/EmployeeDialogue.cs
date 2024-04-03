@@ -16,7 +16,7 @@ namespace NPC
         {
             if (firstInteraction)
             {
-                sentences = new string[3] { "Hey I am looking for employees for the cafe", "It is a 12-hour shift and you get 3000 dollars", "You In?" };
+                sentences = new string[3] { "Hey I am looking for employees for the cafe", "It is a 8-hour shift and you get 3000 dollars", "You In?" };
                 firstInteraction = false;
                 StartCoroutine(_runInteraction());
 
