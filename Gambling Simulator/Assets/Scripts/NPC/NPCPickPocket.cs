@@ -48,7 +48,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
             pickPocket();
             interactable = false;
         } else {
-            player.GetComponent<PoliceChase>().StartChase();
+            CallPolice();
         }
     }
     private void pickPocket() {
@@ -67,6 +67,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     {
         // Reset cooldown, player cant steal
         timeLeft = stealCoolDown;
+        interactable = false;
 
         player.GetComponent<PoliceChase>().StartChase();
     }
