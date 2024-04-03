@@ -16,7 +16,7 @@ public class SlotMachine : MonoBehaviour
     // Audio
     public AudioManager audioManager;
 
-    void Update() {
+    void Update() { 
         if (Input.GetKeyDown(KeyCode.Space) && !isSpinning) {
             if (PlayerCash.getCash()>=spinCost) {
                 welcome.GetComponent<Animator>().SetTrigger("FadeOut");
@@ -48,6 +48,7 @@ public class SlotMachine : MonoBehaviour
             {
                 StartCoroutine(SpinReel(slotReels[i], randomTile, true));
                 yield return new WaitForSeconds(.3f); // Stagger the start of each reel spin
+                audioManager.PlaySFX("Slot Reels Stopping");
             }
         }
         // Normal Event
@@ -55,8 +56,10 @@ public class SlotMachine : MonoBehaviour
         {
             for (int i = 0; i < slotReels.Length; i++)
             {
+
                 StartCoroutine(SpinReel(slotReels[i], randomTile, false));
                 yield return new WaitForSeconds(.3f); // Stagger the start of each reel spin
+                audioManager.PlaySFX("Slot Reels Stopping");
             }
         }
 
@@ -70,7 +73,7 @@ public class SlotMachine : MonoBehaviour
     private IEnumerator SpinReel(Image reel, int randomTile, bool winEvent)
     {
         float endTime = Time.time + spinDuration;
-
+        
         while (Time.time < endTime)
         {
             int randomSymbolIndex = Random.Range(0, slotSymbols.Length);
@@ -83,6 +86,7 @@ public class SlotMachine : MonoBehaviour
             Debug.Log("Win Event Slot: " + randomTile);
             reel.sprite = slotSymbols[randomTile];
         }
+        
     }
 
     private void CheckWinCondition()

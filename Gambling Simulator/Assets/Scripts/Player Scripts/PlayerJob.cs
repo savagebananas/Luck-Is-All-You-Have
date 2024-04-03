@@ -66,6 +66,7 @@ public class PlayerJob : MonoBehaviour
         pm.canMove = false;
 
         Animator fadeAnim = blackUIScreen.GetComponent<Animator>();
+        blackUIScreen.SetActive(true);
         fadeAnim.SetTrigger("FadeOut");
 
 
@@ -73,6 +74,7 @@ public class PlayerJob : MonoBehaviour
 
         TimeSystem.AddTime(hours * (360/24));
         PlayerCash.addCash(moneyGained);
+        GameObject.Find("Audio Manager").GetComponent<AudioManager>().PlaySFX("CashWin");
 
         yield return new WaitForSeconds(1);
 

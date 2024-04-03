@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class PoliceChase : MonoBehaviour
 {
-    public static GameObject policeCar;
-    public static Sprite policeCarLeft;
-    public static Sprite policeCarRight;
+    public static GameObject  policeCarLeft;
+    public static GameObject policeCarRight;
     public ObjectFinder finder;
     public GameObject player;
     public Button button;
@@ -37,7 +36,6 @@ public class PoliceChase : MonoBehaviour
     public GameObject SpawnPoliceCar(bool left) {
         if (finder == null) {
             finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
-            policeCar = finder.policeCar;
             player = finder.player;
             policeCarLeft = finder.policeCarLeft;
             policeCarRight = finder.policeCarRight;
@@ -53,8 +51,7 @@ public class PoliceChase : MonoBehaviour
             if (min >= mapRightBound) return null;
             max = MathF.Min(pos.x+maxDistance, mapRightBound);
             carPos =new Vector3(UnityEngine.Random.Range(min, max), leftY, pos.z);
-            car = Instantiate(policeCar, carPos, Quaternion.identity);
-            car.GetComponent<SpriteRenderer>().sprite = policeCarLeft;
+            car = Instantiate(policeCarLeft, carPos, Quaternion.identity);
 
 
 
@@ -63,8 +60,7 @@ public class PoliceChase : MonoBehaviour
             if (min <= mapLeftBound) return null;
             max = MathF.Max(pos.x-maxDistance, mapLeftBound);
             carPos =new Vector3(UnityEngine.Random.Range(min, max), rightY, pos.z);
-            car = Instantiate(policeCar, carPos, Quaternion.identity);            
-            car.GetComponent<SpriteRenderer>().sprite = policeCarRight;
+            car = Instantiate(policeCarRight, carPos, Quaternion.identity);            
         }
          
         // Set car move script to move left or right
