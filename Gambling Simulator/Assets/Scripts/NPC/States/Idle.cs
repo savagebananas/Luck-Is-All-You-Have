@@ -32,9 +32,11 @@ public class Idle : State
                 ((RandomRoam)randomRoamState).nextWalkToPointTime = nextWalkToPointTime;
                 stateMachine.SetNewState(randomRoamState);
             }
-            if (pickPocket != null) 
+            if (pickPocket != null)
+            {
                 pickPocket.OnInteractionDeselected();
                 pickPocket.interactable = false;
+            } 
         }
     }
 

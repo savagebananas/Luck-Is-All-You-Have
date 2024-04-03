@@ -12,17 +12,14 @@ using UnityEngine.UI;
 /// in the inspector. Add this scrept on to a game object where you want the player to be able to pick
 /// up a job.
 /// </summary>
-public class Job : MonoBehaviour, IInteractable
+public class Job : MonoBehaviour//, IInteractable
 {
     public String title;
-    public GameObject interactionLight;
-    public int dailyWage;
-    public float hoursPerDay;
-    public bool isCurrentJob;
-    public bool random;
-    public int minIncome = 100;
-    public int maxIncome = 2000;
+    public int moneyGained;
+    public float amountOfHours;
+
     private static GameObject player;
+    public GameObject interactionLight;
     public ObjectFinder finder;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +30,13 @@ public class Job : MonoBehaviour, IInteractable
         }
     }
 
+    public void StartJob()
+    {
+        PlayerJob.setJob(this);
+        player.GetComponent<PlayerJob>().work();
+    }
+
+    /*
      void IInteractable.OnInteractSelected()
     {
         if (interactionLight != null) interactionLight.SetActive(true);
@@ -67,17 +71,16 @@ public class Job : MonoBehaviour, IInteractable
     {
 
     }
-    private void randomizeWage() {
-        dailyWage = UnityEngine.Random.Range(minIncome, maxIncome);
-    }
+    */
+
     public void setWage(int wage) {
-        dailyWage = wage;
+        moneyGained = wage;
     }
     public void setTitle(String title) {
         this.title = title;
     }
     public void setHours(float hours) {
-        hoursPerDay = hours;
+        amountOfHours = hours;
     }
 
    

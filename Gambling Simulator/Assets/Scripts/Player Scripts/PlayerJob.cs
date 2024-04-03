@@ -7,17 +7,20 @@ using UnityEngine;
 public class PlayerJob : MonoBehaviour
 {
     public static string jobTitle;
-    private static int dailyWage;
-    private static float hoursPerDay;
+    private static int moneyGained;
+    private static float hours;
+    private bool canWork = true;
+
     private static bool isActive;
     public static Job currentJob;
+
     public GameObject blackUIScreen;
     public ObjectFinder finder;
     public AnimationClip fadeOut;
     public AnimationClip fadeIn;
     private static GameObject player;
-    private bool canWork = true;
     public TimeSystem timeSys;
+
     void Start()
     {
         
@@ -28,24 +31,18 @@ public class PlayerJob : MonoBehaviour
         fadeOut = finder.fadeOut;
         fadeIn = finder.fadeIn;
         timeSys = finder.timeSys;
-        timeSys.newDay.AddListener(() => StartCoroutine(WorkShift()));
+        //timeSys.newDay.AddListener(() => StartCoroutine(WorkShift()));
         
         
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public static void setJob(Job job) {
-        currentJob = job;
-        isActive = true;
         jobTitle = job.title;
-        dailyWage = job.dailyWage;
-        hoursPerDay = job.hoursPerDay;
+        moneyGained = job.moneyGained;
+        hours = job.amountOfHours;
     }
+    /*
     public static void firePlayer() {
         isActive = false;
         currentJob.isCurrentJob = false;
@@ -54,34 +51,38 @@ public class PlayerJob : MonoBehaviour
         currentJob = null;
 
     }
+    */
     public void work() {
         if (blackUIScreen == null) {
 
             if (finder==null)finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
             blackUIScreen = finder.blackUIScreen;
         }
-        if (isActive && canWork) {
-            // Visuals
-            
-            canWork = false;
-            StartCoroutine(WorkShift());
 
-            
-        }
+        StartCoroutine(WorkShift());   
     }
     private IEnumerator WorkShift() {
         PlayerMovement pm = player.GetComponent<PlayerMovement>();
         pm.canMove = false;
-        blackUIScreen.SetActive(true);
+
         Animator fadeAnim = blackUIScreen.GetComponent<Animator>();
         fadeAnim.SetTrigger("FadeOut");
-        TimeSystem.AddTime(hoursPerDay*3600);
-        PlayerCash.addCash(dailyWage);
-        yield return new WaitForSeconds(fadeOut.length);
-        pm.canMove = true;
-        blackUIScreen.SetActive(false);
 
- 
+
+        yield return new WaitForSeconds(1);
+
+        TimeSystem.AddTime(hours * (360/24));
+        PlayerCash.addCash(moneyGained);
+
+        yield return new WaitForSeconds(1);
+
+
+        blackUIScreen.SetActive(false);
+        blackUIScreen.SetActive(true);
+
+        yield return new WaitForSeconds(fadeOut.length);
+
+        pm.canMove = true;
     }
 
 }
