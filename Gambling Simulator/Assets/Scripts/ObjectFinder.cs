@@ -16,9 +16,8 @@ public class ObjectFinder : MonoBehaviour
     public Sprite[] slotSymbols; // Assign via Inspector
     public GameObject player;
     public GameObject cashDisplay;
-    public GameObject policeCar;
-    public Sprite policeCarLeft;
-    public Sprite policeCarRight;
+    public GameObject policeCarLeft;
+    public GameObject policeCarRight;
     public TextMeshProUGUI cashText;
     public AudioManager audioManager;
     public GameObject blackUIScreen;
