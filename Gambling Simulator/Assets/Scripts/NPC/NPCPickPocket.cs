@@ -37,13 +37,12 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
     private AudioManager audioManager;
     public TextMeshProUGUI stealText;
     public GameObject interactionLight;
-    public StateMachine sm;
-    public Idle idle;
+   
 
 
     public void OnInteract()
     {
-        if (!interactable || sm.CurrentState != idle) return;
+        if (!interactable) return;
         if (UnityEngine.Random.Range(0, 100) > failChance) {
             pickPocket();
             interactable = false;
@@ -84,7 +83,7 @@ public class NPCPickPocket : MonoBehaviour, IInteractable
 
     public void OnInteractSelected()
     {
-        if (!interactable || sm.CurrentState != idle) return;
+        if (!interactable) return;
         
         // Cooldown over, indicate choice for pickpocket
         if (timeLeft <= 0)
