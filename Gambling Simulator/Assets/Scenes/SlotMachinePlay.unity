@@ -847,6 +847,10 @@ PrefabInstance:
       propertyPath: sfxSounds.Array.data[9].name
       value: Slot Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 7949406290406950099, guid: 3c7ebd1e3ffb2584280a39a0259dbedb, type: 3}
+      propertyPath: musicSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 729aecee1378b4d14a7821a2017a4452, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
