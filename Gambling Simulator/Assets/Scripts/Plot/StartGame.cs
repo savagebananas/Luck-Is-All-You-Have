@@ -19,14 +19,16 @@ public class StartGame : MonoBehaviour
             finder = GameObject.Find("ObjectFinder").GetComponent<ObjectFinder>();
             letterAnimator = finder.letterAnimator;
             player = finder.player;
-            enterLetter();
+            StartCoroutine(enterLetter());
             startOfGame = false;
 
         }
     }
-    private void enterLetter() {
+    private IEnumerator enterLetter() {
         letterAnimator.SetTrigger("LetterEnter");
         display = true;
+        yield return new WaitForSeconds(15f);
+        gameObject.SetActive(false);
     }
     private void exitLetter() {
         letterAnimator.SetTrigger("LetterExit");
@@ -36,16 +38,5 @@ public class StartGame : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (display) {
-            if (Input.GetKeyDown(KeyCode.E)) {
-                exitLetter();
-            }
-        }
-        if (!display && !startOfGame) {
-            Destroy(this);
-        }
-        
-    }
+   
 }
