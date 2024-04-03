@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.52265, y: 0.5964999, z: 0}
-    m_Extent: {x: 2.56485, y: 1.4131, z: 0}
+    m_Center: {x: -0.52415, y: 0.60300004, z: 0}
+    m_Extent: {x: 2.5704498, y: 1.4041001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -833,8 +833,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.6756, y: 0.044200003, z: 0}
-    m_Extent: {x: 1.1428, y: 0.5988, z: 0}
+    m_Center: {x: 0.6756, y: 0.034199983, z: 0}
+    m_Extent: {x: 1.146, y: 0.6007, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5088,8 +5088,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.28535002, y: 0.041449994, z: 0}
-    m_Extent: {x: 1.5281501, y: 0.60144997, z: 0}
+    m_Center: {x: 0.30105, y: 0.04030001, z: 0}
+    m_Extent: {x: 1.5255499, y: 0.5934, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11529,8 +11529,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.036499977, y: 0.08534998, z: 0}
-    m_Extent: {x: 2.2778, y: 0.78845, z: 0}
+    m_Center: {x: -0.031000018, y: 0.09490001, z: 0}
+    m_Extent: {x: 2.275, y: 0.7856, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12522,8 +12522,7 @@ Transform:
   m_LocalPosition: {x: 20.394531, y: 11.730089, z: -0.6566028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 880557527}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842159089
@@ -13125,6 +13124,8 @@ GameObject:
   m_Component:
   - component: {fileID: 880557527}
   - component: {fileID: 880557528}
+  - component: {fileID: 880557529}
+  - component: {fileID: 880557530}
   m_Layer: 0
   m_Name: Coffee Shop Worker
   m_TagString: Untagged
@@ -13141,11 +13142,11 @@ Transform:
   m_GameObject: {fileID: 880557526}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48.03, y: -10.68, z: 0.6566028}
+  m_LocalPosition: {x: 68.42453, y: 1.0500889, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 831103267}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &880557528
 SpriteRenderer:
@@ -13199,6 +13200,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &880557529
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880557526}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 747c36fbb61f86847a1b03f2a627629a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &880557530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880557526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b528f0269bea4b8b861e2b3c2df7cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Coffee Worker
+  interactionLight: {fileID: 0}
+  dailyWage: 10
+  hoursPerDay: 0
+  isCurrentJob: 0
+  random: 0
+  minIncome: 100
+  maxIncome: 2000
+  finder: {fileID: 0}
 --- !u!1 &882538148
 GameObject:
   m_ObjectHideFlags: 0
@@ -24919,8 +24962,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.19999999, y: -0.93175006, z: 0}
-    m_Extent: {x: 1.4772999, y: 1.67135, z: 0}
+    m_Center: {x: -0.21155, y: -0.92985, z: 0}
+    m_Extent: {x: 1.48435, y: 1.66775, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25041,8 +25084,8 @@ MonoBehaviour:
   button: {fileID: 1420324111}
   mapLeftBound: -70
   mapRightBound: 110
-  minDistance: 10
-  maxDistance: 20
+  minDistance: 30
+  maxDistance: 40
 --- !u!1 &1906860400
 GameObject:
   m_ObjectHideFlags: 0
@@ -27380,7 +27423,7 @@ Transform:
   m_GameObject: {fileID: 1801617345867676707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 8.75, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27497,7 +27540,7 @@ PrefabInstance:
       objectReference: {fileID: 9379746}
     - target: {fileID: 5360472056101337575, guid: bd78a4cc3d3ecf1409df0a1f415ac18b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.15
+      value: 44.35
       objectReference: {fileID: 0}
     - target: {fileID: 5360472056101337575, guid: bd78a4cc3d3ecf1409df0a1f415ac18b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28722,6 +28765,7 @@ SceneRoots:
   - {fileID: 247440772}
   - {fileID: 2655524223202542061}
   - {fileID: 1834329052122177046}
+  - {fileID: 880557527}
   - {fileID: 1906860401}
   - {fileID: 3979195444118364027}
   - {fileID: 256052500}
