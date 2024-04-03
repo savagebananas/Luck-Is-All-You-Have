@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.5153501, y: 0.59910005, z: 0}
-    m_Extent: {x: 2.56725, y: 1.4129, z: 0}
+    m_Center: {x: -0.5209501, y: 0.597, z: 0}
+    m_Extent: {x: 2.56335, y: 1.3984, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -701,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &63132157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,8 +935,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.6787, y: 0.042899996, z: 0}
-    m_Extent: {x: 1.1401, y: 0.5913, z: 0}
+    m_Center: {x: 0.67755, y: 0.033149987, z: 0}
+    m_Extent: {x: 1.1452501, y: 0.59465003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5384,8 +5384,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29760003, y: 0.039299995, z: 0}
-    m_Extent: {x: 1.5266, y: 0.60590005, z: 0}
+    m_Center: {x: 0.2931, y: 0.0404, z: 0}
+    m_Extent: {x: 1.5312, y: 0.6028, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11907,8 +11907,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.03524995, y: 0.0959, z: 0}
-    m_Extent: {x: 2.28085, y: 0.7921, z: 0}
+    m_Center: {x: -0.03034997, y: 0.09015, z: 0}
+    m_Extent: {x: 2.28155, y: 0.79065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26509,8 +26509,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.20059997, y: -0.92015004, z: 0}
-    m_Extent: {x: 1.4832001, y: 1.67345, z: 0}
+    m_Center: {x: -0.20740002, y: -0.9233, z: 0}
+    m_Extent: {x: 1.4846001, y: 1.6772001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -29861,6 +29861,7 @@ GameObject:
   - component: {fileID: 2414784105020820190}
   - component: {fileID: 1239896496304476069}
   - component: {fileID: 7947759070976935176}
+  - component: {fileID: 7947759070976935177}
   m_Layer: 5
   m_Name: Letter
   m_TagString: Untagged
@@ -29969,6 +29970,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7947759070976935177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066662273218876397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e653e4f4a5614de48127492a73821e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterAnimator: {fileID: 0}
+  player: {fileID: 0}
+  finder: {fileID: 0}
 --- !u!223 &8711672960544648039
 Canvas:
   m_ObjectHideFlags: 0
