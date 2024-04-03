@@ -7,7 +7,6 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEditor.Rendering.FilterWindow;
 
 public class KenoGame : MinigameBase
 {
