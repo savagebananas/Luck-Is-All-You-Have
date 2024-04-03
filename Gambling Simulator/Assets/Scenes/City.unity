@@ -189,8 +189,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.51890004, y: 0.59484994, z: 0}
-    m_Extent: {x: 2.5749998, y: 1.40685, z: 0}
+    m_Center: {x: -0.51915, y: 0.605, z: 0}
+    m_Extent: {x: 2.56555, y: 1.408, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -833,8 +833,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.6709, y: 0.033899993, z: 0}
-    m_Extent: {x: 1.1472, y: 0.60010004, z: 0}
+    m_Center: {x: 0.67615, y: 0.035650015, z: 0}
+    m_Extent: {x: 1.1415501, y: 0.59475, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5254,8 +5254,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29394996, y: 0.04585001, z: 0}
-    m_Extent: {x: 1.53265, y: 0.59965, z: 0}
+    m_Center: {x: 0.29305, y: 0.042600006, z: 0}
+    m_Extent: {x: 1.52685, y: 0.60099995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5991,8 +5991,8 @@ MonoBehaviour:
   slotSymbols: []
   player: {fileID: 1905636708}
   cashDisplay: {fileID: 954110364}
-  policeCarLeft: {fileID: 21300000, guid: e0adda57870ec57479fd1eb13e46f942, type: 3}
-  policeCarRight: {fileID: 21300000, guid: 75d2946a756631f4a9486ef6200786e1, type: 3}
+  policeCarLeft: {fileID: 581997227964486465, guid: cd73dd3123f9545a095d4ffdb22c8a32, type: 3}
+  policeCarRight: {fileID: 1339360576666141224, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
   cashText: {fileID: 954110366}
   audioManager: {fileID: 1998819283}
   blackUIScreen: {fileID: 50032227}
@@ -11775,8 +11775,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.034150004, y: 0.08849999, z: 0}
-    m_Extent: {x: 2.28365, y: 0.78480005, z: 0}
+    m_Center: {x: -0.03279996, y: 0.09095001, z: 0}
+    m_Extent: {x: 2.2814, y: 0.79775, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26491,8 +26491,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.21074998, y: -0.92885005, z: 0}
-    m_Extent: {x: 1.48155, y: 1.68285, z: 0}
+    m_Center: {x: -0.20094997, y: -0.93459994, z: 0}
+    m_Extent: {x: 1.48065, y: 1.6754, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -28846,63 +28846,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &2348121610661035473
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1339360576666141224, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_Name
-      value: PoliceCarRight
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035029238326271597, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fef5782abd9534cb0ad978eb7ce636a7, type: 3}
 --- !u!1001 &2655524223202542061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29965,3 +29908,5 @@ SceneRoots:
   - {fileID: 770118146}
   - {fileID: 480792145}
   - {fileID: 870968531}
+  - {fileID: 1261066187}
+  - {fileID: 1806964219}
