@@ -38,19 +38,6 @@ namespace Player_Scripts
             {
                 Debug.Log($"Found current interactable: {interactable}");
                 nearbyInteractables.Add(other.gameObject);
-
-                /*
-                if (_currentlySelectedInteractable == null || _currentlySelectedInteractable != interactable)
-                {
-                    Debug.Log("Adding interactable to list!");
-
-                    nearbyInteractables.Add(interactable);
-
-                    _currentGameObjectInteratcable = other.gameObject;
-                    _currentlySelectedInteractable = interactable;
-                    _currentlySelectedInteractable.OnInteractSelected();
-                }
-                */
             }
         }
 
@@ -66,14 +53,6 @@ namespace Player_Scripts
                 }
 
                 nearbyInteractables.Remove(other.gameObject);
-                /*
-                if (_currentlySelectedInteractable == interactable)
-                {
-                    _currentlySelectedInteractable.OnInteractionDeselected();
-                    _currentlySelectedInteractable = null;
-                    _currentGameObjectInteratcable = null;
-                }
-                */
             }
         }
 
